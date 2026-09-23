@@ -1,451 +1,99 @@
 <!DOCTYPE html>
-<html lang="zh-HK">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Classroom Escape: English Listening Challenge</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
-        
-        body {
-            font-family: 'Nunito', sans-serif;
-            background-color: #f3f4f6;
-            touch-action: none; /* Prevent scrolling on mobile */
-            user-select: none;
-        }
-        #gameCanvas {
-            border: 4px solid #4b5563;
-            background-color: #e5e7eb; /* Floor color */
-            border-radius: 8px;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-        }
-        .retro-btn {
-            transition: all 0.1s;
-        }
-        .retro-btn:active {
-            transform: scale(0.95);
-        }
-    </style>
-</head>
-<body class="h-screen flex flex-col items-center justify-center overflow-hidden">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="道況 — Live Hong Kong traffic cameras, special traffic news, and road conditions from Transport Department open data."
+    />
+    <title>道況 · HK Traffic</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1c2c'/%3E%3Ccircle cx='32' cy='32' r='12' fill='%23f0a202'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Outfit:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+  </head>
+  <body>
+    <div id="app">
+      <div id="map" aria-label="Hong Kong traffic map"></div>
 
-    <!-- Header / HUD -->
-    <div class="w-full max-w-2xl px-4 mb-2 flex justify-between items-center">
-        <div>
-            <h1 class="text-xl font-bold text-gray-800">Classroom Escape 🎓</h1>
-            <p class="text-sm text-gray-600">Level: <span id="levelDisplay">1</span>/5</p>
+      <header class="brand-bar">
+        <div class="brand">
+          <p class="brand-mark">道況</p>
+          <p class="brand-sub">HK Traffic Live</p>
         </div>
-        <div class="text-right">
-             <div class="bg-white px-3 py-1 rounded shadow text-sm font-bold text-blue-600" id="statusMsg">
-                Press Start
-            </div>
+        <div class="brand-meta">
+          <span id="clock" class="clock">--:--</span>
+          <span id="status-pill" class="status-pill is-loading">Syncing…</span>
         </div>
+      </header>
+
+      <aside class="panel" id="panel">
+        <div class="panel-section">
+          <label class="field-label" for="search">Find a camera</label>
+          <input
+            id="search"
+            type="search"
+            placeholder="e.g. Cross Harbour, Nathan Road…"
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="panel-section">
+          <div class="section-head">
+            <h2>Regions</h2>
+            <button type="button" id="clear-filters" class="text-btn">Clear</button>
+          </div>
+          <div id="region-filters" class="chip-row" role="group" aria-label="Filter by region"></div>
+        </div>
+
+        <div class="panel-section camera-section is-empty" id="camera-section">
+          <div class="section-head">
+            <h2>Live view</h2>
+            <button type="button" id="close-camera" class="text-btn">Close</button>
+          </div>
+          <div id="camera-detail" class="camera-detail"></div>
+        </div>
+
+        <div class="panel-section">
+          <div class="section-head">
+            <h2>Cameras <span id="camera-count" class="count-pill">0</span></h2>
+          </div>
+          <div id="camera-list" class="camera-list" aria-label="Matching cameras"></div>
+        </div>
+
+        <div class="panel-section">
+          <div class="section-head">
+            <h2>Special traffic news</h2>
+            <button type="button" id="refresh-btn" class="text-btn">Refresh</button>
+          </div>
+          <div id="news-list" class="news-list" aria-live="polite">
+            <p class="muted">Loading Transport Department notices…</p>
+          </div>
+        </div>
+
+        <footer class="panel-foot">
+          Data from Hong Kong Transport Department / data.gov.hk. Snapshots refresh about every 2 minutes.
+        </footer>
+      </aside>
+
+      <div class="mobile-tabs" role="tablist">
+        <button type="button" class="tab is-active" data-view="map">Map</button>
+        <button type="button" class="tab" data-view="panel">News &amp; cameras</button>
+      </div>
     </div>
-
-    <!-- Game Area -->
-    <div class="relative">
-        <canvas id="gameCanvas" width="600" height="400"></canvas>
-        
-        <!-- Start Overlay -->
-        <div id="startScreen" class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center rounded-lg z-10 text-white text-center p-6">
-            <h2 class="text-3xl font-bold mb-4 text-yellow-400">Mission: Escape the Lab!</h2>
-            <p class="mb-6 text-gray-200">Listen to the teacher's instructions.<br>Move to the correct object to find the key.</p>
-            <button id="startBtn" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full text-xl shadow-lg retro-btn">
-                Start Game ▶️
-            </button>
-            <p class="mt-4 text-xs text-gray-400">Controls: Arrow Keys, WASD, or Click to Move</p>
-        </div>
-
-        <!-- Success Overlay -->
-        <div id="winScreen" class="hidden absolute inset-0 bg-green-600 bg-opacity-90 flex flex-col items-center justify-center rounded-lg z-10 text-white text-center p-6">
-            <h2 class="text-4xl font-bold mb-4">You Escaped! 🎉</h2>
-            <p class="text-xl mb-6">Excellent listening skills!</p>
-            <button onclick="location.reload()" class="bg-white text-green-700 font-bold py-2 px-6 rounded-full shadow-lg retro-btn">
-                Play Again
-            </button>
-        </div>
-    </div>
-
-    <!-- Controls & Tools -->
-    <div class="w-full max-w-2xl px-4 mt-4 grid grid-cols-2 gap-4">
-        
-        <!-- Action Buttons -->
-        <div class="flex gap-2 justify-start">
-            <button id="repeatBtn" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded shadow retro-btn flex items-center gap-2" disabled>
-                <span>🔊</span> Replay Audio
-            </button>
-            <button id="hintBtn" class="bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded shadow retro-btn text-sm" disabled>
-                Show Text (Hint)
-            </button>
-        </div>
-
-        <!-- Hint Display Area -->
-        <div class="flex items-center justify-end">
-             <p id="hintText" class="text-gray-800 font-bold italic opacity-0 transition-opacity duration-300 bg-white px-2 py-1 rounded border">Waiting...</p>
-        </div>
-    </div>
-    
-    <!-- Mobile D-Pad (Visible on small screens only) -->
-    <div class="md:hidden mt-4 grid grid-cols-3 gap-2">
-        <div></div>
-        <button class="bg-gray-300 p-4 rounded active:bg-gray-400" id="btnUp">⬆️</button>
-        <div></div>
-        <button class="bg-gray-300 p-4 rounded active:bg-gray-400" id="btnLeft">⬅️</button>
-        <button class="bg-gray-300 p-4 rounded active:bg-gray-400" id="btnDown">⬇️</button>
-        <button class="bg-gray-300 p-4 rounded active:bg-gray-400" id="btnRight">➡️</button>
-    </div>
-
-    <script>
-        // --- Game Config ---
-        const canvas = document.getElementById('gameCanvas');
-        const ctx = canvas.getContext('2d');
-        const TILE_SIZE = 40; // Size of grid items
-        
-        // --- Game State ---
-        let gameActive = false;
-        let currentLevel = 0;
-        let player = { x: 300, y: 200, size: 24, speed: 3, color: '#3b82f6', targetX: null, targetY: null };
-        let keys = { ArrowUp: false, ArrowDown: false, ArrowLeft: false, ArrowRight: false, w: false, s: false, a: false, d: false };
-        let hintShown = false;
-        
-        // Speech Synthesis Setup
-        const synth = window.speechSynthesis;
-        let voices = [];
-        
-        // --- Level Data (The English Learning Content) ---
-        // Instructions focus on prepositions and vocabulary
-        const levels = [
-            {
-                id: 1,
-                instruction: "Welcome, student. First, please walk to the Teacher's Desk at the front of the room.",
-                targetId: "teacher_desk",
-                hint: "Go to the Teacher's Desk (Front)."
-            },
-            {
-                id: 2,
-                instruction: "Good job. Now, find the Red Bookshelf in the top right corner.",
-                targetId: "red_shelf",
-                hint: "Go to the Red Bookshelf (Top Right)."
-            },
-            {
-                id: 3,
-                instruction: "Excellent. Next, check the Green Plant near the window on the left.",
-                targetId: "plant",
-                hint: "Go to the Green Plant (Left)."
-            },
-            {
-                id: 4,
-                instruction: "You are doing great. Now, go to the Blue Recycling Bin at the bottom of the room.",
-                targetId: "bin",
-                hint: "Go to the Blue Bin (Bottom)."
-            },
-            {
-                id: 5,
-                instruction: "Final step. The key is hidden near the Computer in the bottom right corner. Go there to escape!",
-                targetId: "computer",
-                hint: "Go to the Computer (Bottom Right)."
-            }
-        ];
-
-        // --- Game Objects (Furniture/Interactables) ---
-        const objects = [
-            { id: "teacher_desk", name: "Teacher's Desk", x: 260, y: 50, w: 80, h: 50, color: "#8B4513", icon: "👩‍🏫" },
-            { id: "red_shelf", name: "Red Bookshelf", x: 500, y: 30, w: 60, h: 100, color: "#dc2626", icon: "📚" },
-            { id: "plant", name: "Plant", x: 20, y: 150, w: 50, h: 50, color: "#16a34a", icon: "🌿" },
-            { id: "window", name: "Window", x: 0, y: 100, w: 10, h: 100, color: "#93c5fd", icon: "" },
-            { id: "bin", name: "Recycling Bin", x: 280, y: 340, w: 40, h: 40, color: "#2563eb", icon: "♻️" },
-            { id: "computer", name: "Computer", x: 520, y: 320, w: 60, h: 60, color: "#4b5563", icon: "💻" },
-            { id: "door", name: "Door", x: 50, y: 350, w: 60, h: 10, color: "#78350f", icon: "🚪" },
-            { id: "board", name: "Whiteboard", x: 200, y: 10, w: 200, h: 10, color: "#fff", icon: "" }
-        ];
-
-        // --- Core Functions ---
-
-        function initGame() {
-            // Load voices
-            voices = synth.getVoices();
-            if (voices.length === 0) {
-                synth.onvoiceschanged = () => { voices = synth.getVoices(); };
-            }
-
-            document.getElementById('startScreen').classList.add('hidden');
-            document.getElementById('repeatBtn').disabled = false;
-            document.getElementById('hintBtn').disabled = false;
-            document.getElementById('statusMsg').innerText = "Listen closely...";
-            
-            gameActive = true;
-            resetPlayerPos();
-            playInstruction();
-            // Loop is already running via draw(), so we don't need to call a non-existent gameLoop()
-        }
-
-        function resetPlayerPos() {
-            player.x = 300;
-            player.y = 200;
-            player.targetX = null;
-            player.targetY = null;
-        }
-
-        function playInstruction() {
-            if (currentLevel >= levels.length) {
-                winGame();
-                return;
-            }
-            
-            const text = levels[currentLevel].instruction;
-            speak(text);
-            
-            // Hide hint initially
-            document.getElementById('hintText').style.opacity = '0';
-            hintShown = false;
-            document.getElementById('levelDisplay').innerText = currentLevel + 1;
-        }
-
-        function speak(text) {
-            synth.cancel(); // Stop previous speech
-            const utterance = new SpeechSynthesisUtterance(text);
-            utterance.rate = 0.9; // Slightly slower for students
-            utterance.pitch = 1;
-            
-            // Try to select an English voice
-            const enVoice = voices.find(v => v.lang.includes('en-GB')) || voices.find(v => v.lang.includes('en-US'));
-            if (enVoice) utterance.voice = enVoice;
-
-            synth.speak(utterance);
-        }
-
-        function winGame() {
-            gameActive = false;
-            speak("Congratulations! You have escaped the room.");
-            document.getElementById('winScreen').classList.remove('hidden');
-        }
-
-        // --- Logic & Physics ---
-
-        function checkCollision(rect1, rect2) {
-            return (rect1.x < rect2.x + rect2.w &&
-                    rect1.x + rect1.size > rect2.x &&
-                    rect1.y < rect2.y + rect2.h &&
-                    rect1.y + rect1.size > rect2.y);
-        }
-
-        function update() {
-            if (!gameActive) return;
-
-            let moveX = 0;
-            let moveY = 0;
-
-            // Keyboard Movement
-            if (keys.ArrowUp || keys.w) moveY = -player.speed;
-            if (keys.ArrowDown || keys.s) moveY = player.speed;
-            if (keys.ArrowLeft || keys.a) moveX = -player.speed;
-            if (keys.ArrowRight || keys.d) moveX = player.speed;
-
-            // Mouse/Touch Movement (Pathfinding-ish)
-            if (player.targetX !== null && player.targetY !== null) {
-                const dx = player.targetX - (player.x + player.size/2);
-                const dy = player.targetY - (player.y + player.size/2);
-                const distance = Math.sqrt(dx*dx + dy*dy);
-
-                if (distance > player.speed) {
-                    moveX = (dx / distance) * player.speed;
-                    moveY = (dy / distance) * player.speed;
-                } else {
-                    player.targetX = null;
-                    player.targetY = null;
-                }
-            }
-
-            // Apply movement (with boundary checks)
-            if (player.x + moveX > 0 && player.x + moveX < canvas.width - player.size) player.x += moveX;
-            if (player.y + moveY > 0 && player.y + moveY < canvas.height - player.size) player.y += moveY;
-
-            // Check Interactions
-            checkInteractions();
-        }
-
-        let lastInteractionTime = 0;
-
-        function checkInteractions() {
-            const now = Date.now();
-            if (now - lastInteractionTime < 1000) return; // Reduced cooldown as bounce handles separation
-
-            const level = levels[currentLevel];
-            
-            for (let obj of objects) {
-                if (checkCollision(player, obj)) {
-                    lastInteractionTime = now;
-                    
-                    // 1. Handle Game Logic (Audio & State)
-                    if (obj.id === level.targetId) {
-                        // Correct Object!
-                        speak("Correct! " + (currentLevel < levels.length -1 ? "Next clue." : ""));
-                        // Visual flash effect logic could go here
-                        currentLevel++;
-                        setTimeout(playInstruction, 1500);
-                    } else {
-                        // Wrong Object
-                        speak(`That is the ${obj.name}. Try again.`);
-                        document.getElementById('statusMsg').innerText = `Wrong! That's the ${obj.name}`;
-                        document.getElementById('statusMsg').classList.add('bg-red-100');
-                        setTimeout(() => document.getElementById('statusMsg').classList.remove('bg-red-100'), 1000);
-                    }
-
-                    // 2. Bounce / Separate Player from Object (New Feature)
-                    // Calculate direction from object center to player center
-                    const playerCX = player.x + player.size / 2;
-                    const playerCY = player.y + player.size / 2;
-                    const objCX = obj.x + obj.w / 2;
-                    const objCY = obj.y + obj.h / 2;
-
-                    let dx = playerCX - objCX;
-                    let dy = playerCY - objCY;
-                    
-                    // Normalize vector
-                    const dist = Math.sqrt(dx*dx + dy*dy) || 1;
-                    const pushDistance = 30; // Push back distance in pixels
-
-                    // Apply push
-                    player.x += (dx / dist) * pushDistance;
-                    player.y += (dy / dist) * pushDistance;
-
-                    // Stop any active movement targets (mouse click)
-                    player.targetX = null;
-                    player.targetY = null;
-
-                    // Ensure player stays within canvas bounds after bounce
-                    player.x = Math.max(0, Math.min(canvas.width - player.size, player.x));
-                    player.y = Math.max(0, Math.min(canvas.height - player.size, player.y));
-
-                    break; 
-                }
-            }
-        }
-
-        function draw() {
-            // Clear Canvas
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            // Draw Objects
-            for (let obj of objects) {
-                // Shadow
-                ctx.fillStyle = 'rgba(0,0,0,0.1)';
-                ctx.fillRect(obj.x + 4, obj.y + 4, obj.w, obj.h);
-                
-                // Object Body
-                ctx.fillStyle = obj.color;
-                ctx.fillRect(obj.x, obj.y, obj.w, obj.h);
-                
-                // Border
-                ctx.strokeStyle = "rgba(0,0,0,0.2)";
-                ctx.lineWidth = 2;
-                ctx.strokeRect(obj.x, obj.y, obj.w, obj.h);
-
-                // Icon / Label
-                if (obj.icon) {
-                    ctx.font = "20px Arial";
-                    ctx.textAlign = "center";
-                    ctx.textBaseline = "middle";
-                    ctx.fillText(obj.icon, obj.x + obj.w/2, obj.y + obj.h/2);
-                }
-            }
-
-            // Draw Target Marker (Click location)
-            if (player.targetX) {
-                ctx.beginPath();
-                ctx.arc(player.targetX, player.targetY, 5, 0, Math.PI * 2);
-                ctx.fillStyle = "rgba(0,0,0,0.2)";
-                ctx.fill();
-            }
-
-            // Draw Player
-            ctx.fillStyle = player.color;
-            ctx.beginPath();
-            ctx.arc(player.x + player.size/2, player.y + player.size/2, player.size/2, 0, Math.PI*2);
-            ctx.fill();
-            
-            // Player Eyes (to look alive)
-            ctx.fillStyle = "white";
-            ctx.beginPath();
-            ctx.arc(player.x + player.size/2 - 4, player.y + player.size/2 - 2, 4, 0, Math.PI*2);
-            ctx.arc(player.x + player.size/2 + 4, player.y + player.size/2 - 2, 4, 0, Math.PI*2);
-            ctx.fill();
-            ctx.fillStyle = "black";
-            ctx.beginPath();
-            ctx.arc(player.x + player.size/2 - 4, player.y + player.size/2 - 2, 1.5, 0, Math.PI*2);
-            ctx.arc(player.x + player.size/2 + 4, player.y + player.size/2 - 2, 1.5, 0, Math.PI*2);
-            ctx.fill();
-
-            requestAnimationFrame(() => {
-                update();
-                draw();
-            });
-        }
-
-        // --- Event Listeners ---
-
-        // Start Game
-        document.getElementById('startBtn').addEventListener('click', () => {
-            initGame();
-        });
-
-        // Replay Audio
-        document.getElementById('repeatBtn').addEventListener('click', () => {
-            if(gameActive) speak(levels[currentLevel].instruction);
-        });
-
-        // Show Hint
-        document.getElementById('hintBtn').addEventListener('click', () => {
-            if(!gameActive) return;
-            const hintEl = document.getElementById('hintText');
-            hintEl.innerText = levels[currentLevel].hint;
-            hintEl.style.opacity = hintShown ? '0' : '1';
-            hintShown = !hintShown;
-        });
-
-        // Keyboard Input
-        window.addEventListener('keydown', (e) => {
-            if(keys.hasOwnProperty(e.key)) keys[e.key] = true;
-            
-            // Stop arrow keys scrolling page
-            if(["ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
-                e.preventDefault();
-            }
-        });
-        window.addEventListener('keyup', (e) => {
-            if(keys.hasOwnProperty(e.key)) keys[e.key] = false;
-        });
-
-        // Mouse/Touch Input (Movement)
-        canvas.addEventListener('pointerdown', (e) => {
-            if (!gameActive) return;
-            const rect = canvas.getBoundingClientRect();
-            // Scaling for responsiveness
-            const scaleX = canvas.width / rect.width;
-            const scaleY = canvas.height / rect.height;
-            
-            player.targetX = (e.clientX - rect.left) * scaleX;
-            player.targetY = (e.clientY - rect.top) * scaleY;
-        });
-
-        // Mobile D-Pad Listeners
-        const addTouchBtn = (id, key) => {
-            const btn = document.getElementById(id);
-            btn.addEventListener('touchstart', (e) => { e.preventDefault(); keys[key] = true; });
-            btn.addEventListener('touchend', (e) => { e.preventDefault(); keys[key] = false; });
-            btn.addEventListener('mousedown', () => keys[key] = true);
-            btn.addEventListener('mouseup', () => keys[key] = false);
-        };
-        addTouchBtn('btnUp', 'ArrowUp');
-        addTouchBtn('btnDown', 'ArrowDown');
-        addTouchBtn('btnLeft', 'ArrowLeft');
-        addTouchBtn('btnRight', 'ArrowRight');
-
-        // Initial Draw (Background)
-        draw();
-
-    </script>
-</body>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>
