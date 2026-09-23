@@ -1,0 +1,1682 @@
+[
+  {
+    "id": "H429F",
+    "region": "Hong Kong Island",
+    "name": "Aberdeen Praya Road near Fish Market",
+    "lat": 22.2485255,
+    "lng": 114.1501576,
+    "image": "https://tdcctv.data.one.gov.hk/H429F.JPG"
+  },
+  {
+    "id": "H210F",
+    "region": "Hong Kong Island",
+    "name": "Aberdeen Tunnel - Wan Chai Side",
+    "lat": 22.27490622,
+    "lng": 114.1791642,
+    "image": "https://tdcctv.data.one.gov.hk/H210F.JPG"
+  },
+  {
+    "id": "H421F",
+    "region": "Hong Kong Island",
+    "name": "Aberdeen Tunnel - Aberdeen Side",
+    "lat": 22.25024351,
+    "lng": 114.1766512,
+    "image": "https://tdcctv.data.one.gov.hk/H421F.JPG"
+  },
+  {
+    "id": "H422F2",
+    "region": "Hong Kong Island",
+    "name": "Ap Lei Chau Bridge Road near Aberdeen Police Station",
+    "lat": 22.24792186,
+    "lng": 114.1610034,
+    "image": "https://tdcctv.data.one.gov.hk/H422F2.JPG"
+  },
+  {
+    "id": "H904F",
+    "region": "Hong Kong Island",
+    "name": "Canal Road Flyover near Gloucester Road",
+    "lat": 22.2793944,
+    "lng": 114.1813669,
+    "image": "https://tdcctv.data.one.gov.hk/H904F.JPG"
+  },
+  {
+    "id": "H216F",
+    "region": "Hong Kong Island",
+    "name": "Canal Road Flyover near Time Square",
+    "lat": 22.27930409,
+    "lng": 114.1814057,
+    "image": "https://tdcctv.data.one.gov.hk/H216F.JPG"
+  },
+  {
+    "id": "H305F",
+    "region": "Hong Kong Island",
+    "name": "Causeway Road near Hing Fat Street",
+    "lat": 22.28175082,
+    "lng": 114.1912256,
+    "image": "https://tdcctv.data.one.gov.hk/H305F.JPG"
+  },
+  {
+    "id": "H106F",
+    "region": "Hong Kong Island",
+    "name": "Connaught Road Central near Exchange Square",
+    "lat": 22.2859674,
+    "lng": 114.1557495,
+    "image": "https://tdcctv.data.one.gov.hk/H106F.JPG"
+  },
+  {
+    "id": "H110F",
+    "region": "Hong Kong Island",
+    "name": "Connaught Road Central near Shun Tak Centre",
+    "lat": 22.28688829,
+    "lng": 114.153993,
+    "image": "https://tdcctv.data.one.gov.hk/H110F.JPG"
+  },
+  {
+    "id": "H138F",
+    "region": "Hong Kong Island",
+    "name": "Cotton Tree Drive near Hong Kong Park Sports Centre",
+    "lat": 22.27768676,
+    "lng": 114.1596417,
+    "image": "https://tdcctv.data.one.gov.hk/H138F.JPG"
+  },
+  {
+    "id": "H207F",
+    "region": "Hong Kong Island",
+    "name": "Cross Harbour Tunnel Hong Kong Side",
+    "lat": 22.28128179,
+    "lng": 114.1819201,
+    "image": "https://tdcctv.data.one.gov.hk/H207F.JPG"
+  },
+  {
+    "id": "H204F",
+    "region": "Hong Kong Island",
+    "name": "Fleming Road near Harbour Road",
+    "lat": 22.28054134,
+    "lng": 114.1744485,
+    "image": "https://tdcctv.data.one.gov.hk/H204F.JPG"
+  },
+  {
+    "id": "H222F",
+    "region": "Hong Kong Island",
+    "name": "Gloucester Road near Sun Hung Kai Center",
+    "lat": 22.27971054,
+    "lng": 114.1765444,
+    "image": "https://tdcctv.data.one.gov.hk/H222F.JPG"
+  },
+  {
+    "id": "H215F",
+    "region": "Hong Kong Island",
+    "name": "Gloucester Road near Wan Chai Interchange",
+    "lat": 22.28160696,
+    "lng": 114.1790867,
+    "image": "https://tdcctv.data.one.gov.hk/H215F.JPG"
+  },
+  {
+    "id": "H214F",
+    "region": "Hong Kong Island",
+    "name": "Harcourt Road near Red Cross Headquarter",
+    "lat": 22.27981869,
+    "lng": 114.1685587,
+    "image": "https://tdcctv.data.one.gov.hk/H214F.JPG"
+  },
+  {
+    "id": "H201F",
+    "region": "Hong Kong Island",
+    "name": "Hennessy Road near Arsenal Street",
+    "lat": 22.27783195,
+    "lng": 114.1685006,
+    "image": "https://tdcctv.data.one.gov.hk/H201F.JPG"
+  },
+  {
+    "id": "H802F",
+    "region": "Hong Kong Island",
+    "name": "Island Eastern Corridor near Hoi Yu Street",
+    "lat": 22.29106727,
+    "lng": 114.2119641,
+    "image": "https://tdcctv.data.one.gov.hk/H802F.JPG"
+  },
+  {
+    "id": "H801F",
+    "region": "Hong Kong Island",
+    "name": "Island Eastern Corridor near Ka Wah Centre",
+    "lat": 22.29401254,
+    "lng": 114.2054047,
+    "image": "https://tdcctv.data.one.gov.hk/H801F.JPG"
+  },
+  {
+    "id": "H803F",
+    "region": "Hong Kong Island",
+    "name": "Island Eastern Corridor near Quarry Bay Park",
+    "lat": 22.28826553,
+    "lng": 114.2211432,
+    "image": "https://tdcctv.data.one.gov.hk/H803F.JPG"
+  },
+  {
+    "id": "H307F",
+    "region": "Hong Kong Island",
+    "name": "King's Road near Tin Chong Street",
+    "lat": 22.29022115,
+    "lng": 114.195273,
+    "image": "https://tdcctv.data.one.gov.hk/H307F.JPG"
+  },
+  {
+    "id": "H903F",
+    "region": "Hong Kong Island",
+    "name": "Morrison Hill Road near Sports Road",
+    "lat": 22.27573701,
+    "lng": 114.1808526,
+    "image": "https://tdcctv.data.one.gov.hk/H903F.JPG"
+  },
+  {
+    "id": "H107F",
+    "region": "Hong Kong Island",
+    "name": "Pedder Street",
+    "lat": 22.28142516,
+    "lng": 114.1570698,
+    "image": "https://tdcctv.data.one.gov.hk/H107F.JPG"
+  },
+  {
+    "id": "H130F",
+    "region": "Hong Kong Island",
+    "name": "Pok Fu Lam Road near Pokfield Road",
+    "lat": 22.28179051,
+    "lng": 114.1323068,
+    "image": "https://tdcctv.data.one.gov.hk/H130F.JPG"
+  },
+  {
+    "id": "H132F2",
+    "region": "Hong Kong Island",
+    "name": "Pok Fu Lam Road near Smithfield Road",
+    "lat": 22.27758183,
+    "lng": 114.130872,
+    "image": "https://tdcctv.data.one.gov.hk/H132F2.JPG"
+  },
+  {
+    "id": "H109F",
+    "region": "Hong Kong Island",
+    "name": "Queen's Road Central near Garden Road",
+    "lat": 22.27982723,
+    "lng": 114.1616694,
+    "image": "https://tdcctv.data.one.gov.hk/H109F.JPG"
+  },
+  {
+    "id": "H108F",
+    "region": "Hong Kong Island",
+    "name": "Queen's Road Central near Ice House Street",
+    "lat": 22.28036864,
+    "lng": 114.1576522,
+    "image": "https://tdcctv.data.one.gov.hk/H108F.JPG"
+  },
+  {
+    "id": "H209F",
+    "region": "Hong Kong Island",
+    "name": "Queen's Road East near Stubbs Road",
+    "lat": 22.27504169,
+    "lng": 114.1783686,
+    "image": "https://tdcctv.data.one.gov.hk/H209F.JPG"
+  },
+  {
+    "id": "H422F1",
+    "region": "Hong Kong Island",
+    "name": "Wong Chuk Hang Road near Aberdeen Technical School",
+    "lat": 22.24828309,
+    "lng": 114.1611004,
+    "image": "https://tdcctv.data.one.gov.hk/H422F1.JPG"
+  },
+  {
+    "id": "H401F",
+    "region": "Hong Kong Island",
+    "name": "Wong Chuk Hang Road near Aberdeen Tunnel",
+    "lat": 22.25055947,
+    "lng": 114.1706947,
+    "image": "https://tdcctv.data.one.gov.hk/H401F.JPG"
+  },
+  {
+    "id": "H203F",
+    "region": "Hong Kong Island",
+    "name": "Yee Wo Street near Hennessy Road",
+    "lat": 22.28011673,
+    "lng": 114.1846175,
+    "image": "https://tdcctv.data.one.gov.hk/H203F.JPG"
+  },
+  {
+    "id": "K202F",
+    "region": "Kowloon",
+    "name": "Argyle Street near Yim Po Fong Street",
+    "lat": 22.31981545,
+    "lng": 114.1728075,
+    "image": "https://tdcctv.data.one.gov.hk/K202F.JPG"
+  },
+  {
+    "id": "K209F",
+    "region": "Kowloon",
+    "name": "Boundary Street near Tai Hang Tung Road",
+    "lat": 22.32660644,
+    "lng": 114.17206,
+    "image": "https://tdcctv.data.one.gov.hk/K209F.JPG"
+  },
+  {
+    "id": "K104F",
+    "region": "Kowloon",
+    "name": "Canton Road near China HK City",
+    "lat": 22.30127544,
+    "lng": 114.1680916,
+    "image": "https://tdcctv.data.one.gov.hk/K104F.JPG"
+  },
+  {
+    "id": "K106F",
+    "region": "Kowloon",
+    "name": "Chatham Road near Austin Road",
+    "lat": 22.30270251,
+    "lng": 114.1772723,
+    "image": "https://tdcctv.data.one.gov.hk/K106F.JPG"
+  },
+  {
+    "id": "K109F",
+    "region": "Kowloon",
+    "name": "Chatham Road near Princess Margaret Road",
+    "lat": 22.30557423,
+    "lng": 114.1788251,
+    "image": "https://tdcctv.data.one.gov.hk/K109F.JPG"
+  },
+  {
+    "id": "K221F",
+    "region": "Kowloon",
+    "name": "Cherry Street near Hoi Wang Road",
+    "lat": 22.31830685,
+    "lng": 114.1635385,
+    "image": "https://tdcctv.data.one.gov.hk/K221F.JPG"
+  },
+  {
+    "id": "K305F",
+    "region": "Kowloon",
+    "name": "Cheung Sha Wan Road near Kwong Cheung Street",
+    "lat": 22.33866944,
+    "lng": 114.1518975,
+    "image": "https://tdcctv.data.one.gov.hk/K305F.JPG"
+  },
+  {
+    "id": "K802F",
+    "region": "Kowloon",
+    "name": "Ching Cheung Road near Caritas Medical Center",
+    "lat": 22.34304974,
+    "lng": 114.1551682,
+    "image": "https://tdcctv.data.one.gov.hk/K802F.JPG"
+  },
+  {
+    "id": "TK110F",
+    "region": "Kowloon",
+    "name": "Chui Ling Road near Po Shun Road",
+    "lat": 22.30500482,
+    "lng": 114.2544171,
+    "image": "https://tdcctv.data.one.gov.hk/TK110F.JPG"
+  },
+  {
+    "id": "K627F",
+    "region": "Kowloon",
+    "name": "Clear Water Bay Road near Fei Ngo Shan Road",
+    "lat": 22.3334725,
+    "lng": 114.2219631,
+    "image": "https://tdcctv.data.one.gov.hk/K627F.JPG"
+  },
+  {
+    "id": "K107F",
+    "region": "Kowloon",
+    "name": "Cross Harbour Tunnel Kowloon Side",
+    "lat": 22.30209742,
+    "lng": 114.1805719,
+    "image": "https://tdcctv.data.one.gov.hk/K107F.JPG"
+  },
+  {
+    "id": "K108F",
+    "region": "Kowloon",
+    "name": "Jordan Road near Ferry Street",
+    "lat": 22.3057997,
+    "lng": 114.1667908,
+    "image": "https://tdcctv.data.one.gov.hk/K108F.JPG"
+  },
+  {
+    "id": "K613F",
+    "region": "Kowloon",
+    "name": "Kai Cheung Road near Wang Chiu Road",
+    "lat": 22.32535714,
+    "lng": 114.2087889,
+    "image": "https://tdcctv.data.one.gov.hk/K613F.JPG"
+  },
+  {
+    "id": "K404F",
+    "region": "Kowloon",
+    "name": "Kai Tak Tunnel Kowloon City Side",
+    "lat": 22.3140446,
+    "lng": 114.1874923,
+    "image": "https://tdcctv.data.one.gov.hk/K404F.JPG"
+  },
+  {
+    "id": "K325F",
+    "region": "Kowloon",
+    "name": "Kwai Chung Road near Mei Fo Sun Chuen",
+    "lat": 22.3371325,
+    "lng": 114.142375,
+    "image": "https://tdcctv.data.one.gov.hk/K325F.JPG"
+  },
+  {
+    "id": "K814F",
+    "region": "Kowloon",
+    "name": "Kwun Tong Bypass near Kai Cheung Road",
+    "lat": 22.32573725,
+    "lng": 114.2042658,
+    "image": "https://tdcctv.data.one.gov.hk/K814F.JPG"
+  },
+  {
+    "id": "K812F",
+    "region": "Kowloon",
+    "name": "Kwun Tong Bypass near Laguna City",
+    "lat": 22.30913278,
+    "lng": 114.2295157,
+    "image": "https://tdcctv.data.one.gov.hk/K812F.JPG"
+  },
+  {
+    "id": "K813F",
+    "region": "Kowloon",
+    "name": "Kwun Tong Bypass near Lai Yip Street",
+    "lat": 22.31230599,
+    "lng": 114.2174335,
+    "image": "https://tdcctv.data.one.gov.hk/K813F.JPG"
+  },
+  {
+    "id": "K621F",
+    "region": "Kowloon",
+    "name": "Kwun Tong Road near Kai Yip Estate",
+    "lat": 22.32951984,
+    "lng": 114.2107603,
+    "image": "https://tdcctv.data.one.gov.hk/K621F.JPG"
+  },
+  {
+    "id": "K809F2",
+    "region": "Kowloon",
+    "name": "Kwun Tong Road near Kowloon Bay MTR Station",
+    "lat": 22.31947692,
+    "lng": 114.2148344,
+    "image": "https://tdcctv.data.one.gov.hk/K809F2.JPG"
+  },
+  {
+    "id": "K810F",
+    "region": "Kowloon",
+    "name": "Kwun Tong Road near Ngua Tau Kok MTR Station",
+    "lat": 22.31464427,
+    "lng": 114.2199383,
+    "image": "https://tdcctv.data.one.gov.hk/K810F.JPG"
+  },
+  {
+    "id": "K602F",
+    "region": "Kowloon",
+    "name": "Lei Yue Mun Road near Cha Kwo Ling Road",
+    "lat": 22.31013525,
+    "lng": 114.2292831,
+    "image": "https://tdcctv.data.one.gov.hk/K602F.JPG"
+  },
+  {
+    "id": "K804F",
+    "region": "Kowloon",
+    "name": "Lung Cheung Road near Chak On Estate",
+    "lat": 22.3420935,
+    "lng": 114.1647497,
+    "image": "https://tdcctv.data.one.gov.hk/K804F.JPG"
+  },
+  {
+    "id": "K505F",
+    "region": "Kowloon",
+    "name": "Lung Cheung Road/Chuk Yuen Road",
+    "lat": 22.34290651,
+    "lng": 114.1845919,
+    "image": "https://tdcctv.data.one.gov.hk/K505F.JPG"
+  },
+  {
+    "id": "K614F",
+    "region": "Kowloon",
+    "name": "Lung Cheung Road/Clear Water Bay Road",
+    "lat": 22.33399946,
+    "lng": 114.20849,
+    "image": "https://tdcctv.data.one.gov.hk/K614F.JPG"
+  },
+  {
+    "id": "K508F",
+    "region": "Kowloon",
+    "name": "Lung Cheung Road/Po Kong Village Road",
+    "lat": 22.34148739,
+    "lng": 114.1989686,
+    "image": "https://tdcctv.data.one.gov.hk/K508F.JPG"
+  },
+  {
+    "id": "K405F",
+    "region": "Kowloon",
+    "name": "Ma Tau Wai Road near Farm Road",
+    "lat": 22.32217214,
+    "lng": 114.1874347,
+    "image": "https://tdcctv.data.one.gov.hk/K405F.JPG"
+  },
+  {
+    "id": "K205F",
+    "region": "Kowloon",
+    "name": "Nathan Road near Lai Chi Kok Road",
+    "lat": 22.32230774,
+    "lng": 114.1686338,
+    "image": "https://tdcctv.data.one.gov.hk/K205F.JPG"
+  },
+  {
+    "id": "TK101F",
+    "region": "Kowloon",
+    "name": "Po Lam Road North near Po Hong Road",
+    "lat": 22.32604763,
+    "lng": 114.2511576,
+    "image": "https://tdcctv.data.one.gov.hk/TK101F.JPG"
+  },
+  {
+    "id": "TK105F",
+    "region": "Kowloon",
+    "name": "Po Shun Road near Tseung Kwan O Swimming Pool",
+    "lat": 22.31815879,
+    "lng": 114.2616358,
+    "image": "https://tdcctv.data.one.gov.hk/TK105F.JPG"
+  },
+  {
+    "id": "K506F",
+    "region": "Kowloon",
+    "name": "Prince Edward Rd W Flyover nr Olympic Garden",
+    "lat": 22.32769862,
+    "lng": 114.1905897,
+    "image": "https://tdcctv.data.one.gov.hk/K506F.JPG"
+  },
+  {
+    "id": "K521F",
+    "region": "Kowloon",
+    "name": "Prince Edward Road East near San Po Kong",
+    "lat": 22.33257458,
+    "lng": 114.1961231,
+    "image": "https://tdcctv.data.one.gov.hk/K521F.JPG"
+  },
+  {
+    "id": "K123F",
+    "region": "Kowloon",
+    "name": "Princess Margaret Road near King's Park",
+    "lat": 22.31084812,
+    "lng": 114.1779419,
+    "image": "https://tdcctv.data.one.gov.hk/K123F.JPG"
+  },
+  {
+    "id": "K409F",
+    "region": "Kowloon",
+    "name": "Princess Margaret Road/Argyle Street",
+    "lat": 22.32128749,
+    "lng": 114.1780488,
+    "image": "https://tdcctv.data.one.gov.hk/K409F.JPG"
+  },
+  {
+    "id": "K408F",
+    "region": "Kowloon",
+    "name": "Princess Margaret Road/Pui Ching Road",
+    "lat": 22.31726887,
+    "lng": 114.1785729,
+    "image": "https://tdcctv.data.one.gov.hk/K408F.JPG"
+  },
+  {
+    "id": "K102F",
+    "region": "Kowloon",
+    "name": "Salisbury Road near Chatham Road",
+    "lat": 22.29557735,
+    "lng": 114.1753702,
+    "image": "https://tdcctv.data.one.gov.hk/K102F.JPG"
+  },
+  {
+    "id": "K101F",
+    "region": "Kowloon",
+    "name": "Salisbury Road near Nathan Road",
+    "lat": 22.29458393,
+    "lng": 114.1725851,
+    "image": "https://tdcctv.data.one.gov.hk/K101F.JPG"
+  },
+  {
+    "id": "K607F",
+    "region": "Kowloon",
+    "name": "Sau Mau Ping Road near Hip Wo Street",
+    "lat": 22.32400731,
+    "lng": 114.2258911,
+    "image": "https://tdcctv.data.one.gov.hk/K607F.JPG"
+  },
+  {
+    "id": "K811F",
+    "region": "Kowloon",
+    "name": "Tseung Kwan O Road near Tsui Ping South Estate",
+    "lat": 22.31209325,
+    "lng": 114.2341463,
+    "image": "https://tdcctv.data.one.gov.hk/K811F.JPG"
+  },
+  {
+    "id": "TK904F",
+    "region": "Kowloon",
+    "name": "Tseung Kwan O Tunnel - Tseung Kwan O Side",
+    "lat": 22.31734805,
+    "lng": 114.2576851,
+    "image": "https://tdcctv.data.one.gov.hk/TK904F.JPG"
+  },
+  {
+    "id": "K111F",
+    "region": "Kowloon",
+    "name": "Waterloo Road / Ferry Street",
+    "lat": 22.31216628,
+    "lng": 114.1668971,
+    "image": "https://tdcctv.data.one.gov.hk/K111F.JPG"
+  },
+  {
+    "id": "K112F",
+    "region": "Kowloon",
+    "name": "Waterloo Road near Tung Fong Street",
+    "lat": 22.31317793,
+    "lng": 114.1716528,
+    "image": "https://tdcctv.data.one.gov.hk/K112F.JPG"
+  },
+  {
+    "id": "K502F",
+    "region": "Kowloon",
+    "name": "Waterloo Road/Cornwall Street",
+    "lat": 22.34014333,
+    "lng": 114.1790585,
+    "image": "https://tdcctv.data.one.gov.hk/K502F.JPG"
+  },
+  {
+    "id": "K816F",
+    "region": "Kowloon",
+    "name": "West Kowloon Corridor near Nam Cheong Estate",
+    "lat": 22.32504352,
+    "lng": 114.1618295,
+    "image": "https://tdcctv.data.one.gov.hk/K816F.JPG"
+  },
+  {
+    "id": "K914F",
+    "region": "Kowloon",
+    "name": "West Kowloon Highway near Lai Wan Interchange",
+    "lat": 22.33089245,
+    "lng": 114.1427454,
+    "image": "https://tdcctv.data.one.gov.hk/K914F.JPG"
+  },
+  {
+    "id": "K911F",
+    "region": "Kowloon",
+    "name": "West Kowloon Hwy - Yau Ma Tei Interchange N",
+    "lat": 22.31438739,
+    "lng": 114.1614812,
+    "image": "https://tdcctv.data.one.gov.hk/K911F.JPG"
+  },
+  {
+    "id": "TW117F",
+    "region": "Tsuen Wan",
+    "name": "Castle Peak Road near Texaco Road North",
+    "lat": 22.37020629,
+    "lng": 114.1234625,
+    "image": "https://tdcctv.data.one.gov.hk/TW117F.JPG"
+  },
+  {
+    "id": "TW109F",
+    "region": "Tsuen Wan",
+    "name": "Castle Peak Road near Wo Yi Hop Road",
+    "lat": 22.3648908,
+    "lng": 114.1353776,
+    "image": "https://tdcctv.data.one.gov.hk/TW109F.JPG"
+  },
+  {
+    "id": "SM936F",
+    "region": "Tsuen Wan",
+    "name": "Cheung Pei Shan Road",
+    "lat": 22.37653656,
+    "lng": 114.1230523,
+    "image": "https://tdcctv.data.one.gov.hk/SM936F.JPG"
+  },
+  {
+    "id": "TC101F",
+    "region": "Tsuen Wan",
+    "name": "Cheung Tsing Bridge",
+    "lat": 22.34864601,
+    "lng": 114.1115299,
+    "image": "https://tdcctv.data.one.gov.hk/TC101F.JPG"
+  },
+  {
+    "id": "TC302F",
+    "region": "Tsuen Wan",
+    "name": "Cheung Tsing Highway near Kam Chuk Kok",
+    "lat": 22.34472737,
+    "lng": 114.0932424,
+    "image": "https://tdcctv.data.one.gov.hk/TC302F.JPG"
+  },
+  {
+    "id": "TW102F",
+    "region": "Tsuen Wan",
+    "name": "Kwai Chung Road near Container Terminal",
+    "lat": 22.339406,
+    "lng": 114.133201,
+    "image": "https://tdcctv.data.one.gov.hk/TW102F.JPG"
+  },
+  {
+    "id": "TW108F",
+    "region": "Tsuen Wan",
+    "name": "Kwai Chung Road near Kwai Hing MTR Station",
+    "lat": 22.36080797,
+    "lng": 114.1315632,
+    "image": "https://tdcctv.data.one.gov.hk/TW108F.JPG"
+  },
+  {
+    "id": "TW105F",
+    "region": "Tsuen Wan",
+    "name": "Kwai Tsing Road near Tsing Yi Bridge",
+    "lat": 22.35524257,
+    "lng": 114.1231284,
+    "image": "https://tdcctv.data.one.gov.hk/TW105F.JPG"
+  },
+  {
+    "id": "TW116F",
+    "region": "Tsuen Wan",
+    "name": "Texaco Road Flyover near Sha Tsui Road",
+    "lat": 22.36698179,
+    "lng": 114.1216578,
+    "image": "https://tdcctv.data.one.gov.hk/TW116F.JPG"
+  },
+  {
+    "id": "TC104F",
+    "region": "Tsuen Wan",
+    "name": "Tsing Kwai Highway Near Container Port 4",
+    "lat": 22.33851168,
+    "lng": 114.1321335,
+    "image": "https://tdcctv.data.one.gov.hk/TC104F.JPG"
+  },
+  {
+    "id": "TW121F",
+    "region": "Tsuen Wan",
+    "name": "Tsing Kwai Highway/Cheung Tsing Tunnel",
+    "lat": 22.34854601,
+    "lng": 114.1099184,
+    "image": "https://tdcctv.data.one.gov.hk/TW121F.JPG"
+  },
+  {
+    "id": "TW120F",
+    "region": "Tsuen Wan",
+    "name": "Tsuen Wan Road near Tai Chung Road",
+    "lat": 22.3701465,
+    "lng": 114.1085293,
+    "image": "https://tdcctv.data.one.gov.hk/TW120F.JPG"
+  },
+  {
+    "id": "TW103F",
+    "region": "Tsuen Wan",
+    "name": "Tsuen Wan Road near Tsuen Tsing Interchange",
+    "lat": 22.36196889,
+    "lng": 114.118951,
+    "image": "https://tdcctv.data.one.gov.hk/TW103F.JPG"
+  },
+  {
+    "id": "TW112F",
+    "region": "Tsuen Wan",
+    "name": "Wo Yi Hop Road near Lei Shu Road",
+    "lat": 22.37245862,
+    "lng": 114.1362978,
+    "image": "https://tdcctv.data.one.gov.hk/TW112F.JPG"
+  },
+  {
+    "id": "TI101F",
+    "region": "Tuen Mun & Tin Shui Wai",
+    "name": "Castle Peak Road near Hung Shui Kiu",
+    "lat": 22.43594219,
+    "lng": 114.0005451,
+    "image": "https://tdcctv.data.one.gov.hk/TI101F.JPG"
+  },
+  {
+    "id": "YL111F",
+    "region": "Tuen Mun & Tin Shui Wai",
+    "name": "Castle Peak Road near Pok Oi Interchange",
+    "lat": 22.44465535,
+    "lng": 114.0361091,
+    "image": "https://tdcctv.data.one.gov.hk/YL111F.JPG"
+  },
+  {
+    "id": "YL106F",
+    "region": "Tuen Mun & Tin Shui Wai",
+    "name": "Castle Peak Road nearYuen Long",
+    "lat": 22.44436291,
+    "lng": 114.0321847,
+    "image": "https://tdcctv.data.one.gov.hk/YL106F.JPG"
+  },
+  {
+    "id": "YL101F",
+    "region": "Tuen Mun & Tin Shui Wai",
+    "name": "Long Tin Road near Long Ping Road",
+    "lat": 22.44640711,
+    "lng": 114.0165806,
+    "image": "https://tdcctv.data.one.gov.hk/YL101F.JPG"
+  },
+  {
+    "id": "TM103F",
+    "region": "Tuen Mun & Tin Shui Wai",
+    "name": "Lung Mun Road near Tuen Mun Recreation and Sports Centre",
+    "lat": 22.38336855,
+    "lng": 113.9643918,
+    "image": "https://tdcctv.data.one.gov.hk/TM103F.JPG"
+  },
+  {
+    "id": "RT115F",
+    "region": "Tuen Mun & Tin Shui Wai",
+    "name": "Lung Mun Road near Wu Chui Road",
+    "lat": 22.37616562,
+    "lng": 113.9601401,
+    "image": "https://tdcctv.data.one.gov.hk/RT115F.JPG"
+  },
+  {
+    "id": "TM118F",
+    "region": "Tuen Mun & Tin Shui Wai",
+    "name": "Pui To Road near Tuen Mun Park",
+    "lat": 22.39405567,
+    "lng": 113.974611,
+    "image": "https://tdcctv.data.one.gov.hk/TM118F.JPG"
+  },
+  {
+    "id": "TC604F",
+    "region": "Tuen Mun & Tin Shui Wai",
+    "name": "Ting Kau Bridge",
+    "lat": 22.36029874,
+    "lng": 114.081767,
+    "image": "https://tdcctv.data.one.gov.hk/TC604F.JPG"
+  },
+  {
+    "id": "TR101F",
+    "region": "Tuen Mun & Tin Shui Wai",
+    "name": "Tuen Mun Road - Chai Wan Kok",
+    "lat": 22.37407235,
+    "lng": 114.1030026,
+    "image": "https://tdcctv.data.one.gov.hk/TR101F.JPG"
+  },
+  {
+    "id": "TR111F",
+    "region": "Tuen Mun & Tin Shui Wai",
+    "name": "Tuen Mun Road - near Tsing Lung Tau",
+    "lat": 22.36486675,
+    "lng": 114.0416459,
+    "image": "https://tdcctv.data.one.gov.hk/TR111F.JPG"
+  },
+  {
+    "id": "TR704F",
+    "region": "Tuen Mun & Tin Shui Wai",
+    "name": "Tuen Mun Road near Tsing Yin Street",
+    "lat": 22.39807653,
+    "lng": 113.9764601,
+    "image": "https://tdcctv.data.one.gov.hk/TR704F.JPG"
+  },
+  {
+    "id": "TR119F",
+    "region": "Tuen Mun & Tin Shui Wai",
+    "name": "Tuen Mun Road - Sam Shing Hui",
+    "lat": 22.38313566,
+    "lng": 113.9801811,
+    "image": "https://tdcctv.data.one.gov.hk/TR119F.JPG"
+  },
+  {
+    "id": "TR108F",
+    "region": "Tuen Mun & Tin Shui Wai",
+    "name": "Tuen Mun Road - Sham Tseng Interchange",
+    "lat": 22.36947897,
+    "lng": 114.0619535,
+    "image": "https://tdcctv.data.one.gov.hk/TR108F.JPG"
+  },
+  {
+    "id": "TR107F",
+    "region": "Tuen Mun & Tin Shui Wai",
+    "name": "Tuen Mun Road - Sham Tseng Section",
+    "lat": 22.36559198,
+    "lng": 114.0694813,
+    "image": "https://tdcctv.data.one.gov.hk/TR107F.JPG"
+  },
+  {
+    "id": "TR116F",
+    "region": "Tuen Mun & Tin Shui Wai",
+    "name": "Tuen Mun Road - Siu Lam Section",
+    "lat": 22.36741164,
+    "lng": 114.002117,
+    "image": "https://tdcctv.data.one.gov.hk/TR116F.JPG"
+  },
+  {
+    "id": "TR114F",
+    "region": "Tuen Mun & Tin Shui Wai",
+    "name": "Tuen Mun Road - Tai Lam Kok Section",
+    "lat": 22.35818188,
+    "lng": 114.0191574,
+    "image": "https://tdcctv.data.one.gov.hk/TR114F.JPG"
+  },
+  {
+    "id": "TR105F",
+    "region": "Tuen Mun & Tin Shui Wai",
+    "name": "Tuen Mun Road - Ting Kau Section",
+    "lat": 22.37129549,
+    "lng": 114.0777009,
+    "image": "https://tdcctv.data.one.gov.hk/TR105F.JPG"
+  },
+  {
+    "id": "TR103F",
+    "region": "Tuen Mun & Tin Shui Wai",
+    "name": "Tuen Mun Road - Yau Kom Tau Section",
+    "lat": 22.37033628,
+    "lng": 114.0899744,
+    "image": "https://tdcctv.data.one.gov.hk/TR103F.JPG"
+  },
+  {
+    "id": "TC612F",
+    "region": "Tuen Mun & Tin Shui Wai",
+    "name": "Tuen Mun Road to Ting Kau Bridge",
+    "lat": 22.37038995,
+    "lng": 114.0737207,
+    "image": "https://tdcctv.data.one.gov.hk/TC612F.JPG"
+  },
+  {
+    "id": "RT116F",
+    "region": "Tuen Mun & Tin Shui Wai",
+    "name": "Wong Chu Road near Tuen Mun Heung Sze Wui Road",
+    "lat": 22.38552239,
+    "lng": 113.9750312,
+    "image": "https://tdcctv.data.one.gov.hk/RT116F.JPG"
+  },
+  {
+    "id": "TM101F",
+    "region": "Tuen Mun & Tin Shui Wai",
+    "name": "Wu Chui Road near Wu King Road",
+    "lat": 22.37340927,
+    "lng": 113.9654167,
+    "image": "https://tdcctv.data.one.gov.hk/TM101F.JPG"
+  },
+  {
+    "id": "SW109F",
+    "region": "Tuen Mun & Tin Shui Wai",
+    "name": "Yuen Long Highway near Hung Tin Road",
+    "lat": 22.42806827,
+    "lng": 114.0011184,
+    "image": "https://tdcctv.data.one.gov.hk/SW109F.JPG"
+  },
+  {
+    "id": "SW113F",
+    "region": "Tuen Mun & Tin Shui Wai",
+    "name": "Yuen Long Highway near Pok Oi Interchange",
+    "lat": 22.44337572,
+    "lng": 114.0392287,
+    "image": "https://tdcctv.data.one.gov.hk/SW113F.JPG"
+  },
+  {
+    "id": "SW112F",
+    "region": "Tuen Mun & Tin Shui Wai",
+    "name": "Yuen Long Highway near Shap Pat Heung",
+    "lat": 22.43381492,
+    "lng": 114.0317002,
+    "image": "https://tdcctv.data.one.gov.hk/SW112F.JPG"
+  },
+  {
+    "id": "SW111F",
+    "region": "Tuen Mun & Tin Shui Wai",
+    "name": "Yuen Long Highway near Tong Yan San Tsuen Interchange",
+    "lat": 22.43812359,
+    "lng": 114.0139673,
+    "image": "https://tdcctv.data.one.gov.hk/SW111F.JPG"
+  },
+  {
+    "id": "BC702F",
+    "region": "Tai Po, North & Yuen Long",
+    "name": "Castle Peak Road near Mai Po",
+    "lat": 22.4863216,
+    "lng": 114.0584951,
+    "image": "https://tdcctv.data.one.gov.hk/BC702F.JPG"
+  },
+  {
+    "id": "FH711F",
+    "region": "Tai Po, North & Yuen Long",
+    "name": "Fanling Highway near Hong Lok Yuen",
+    "lat": 22.46557484,
+    "lng": 114.1503591,
+    "image": "https://tdcctv.data.one.gov.hk/FH711F.JPG"
+  },
+  {
+    "id": "TP113F",
+    "region": "Tai Po, North & Yuen Long",
+    "name": "Fanling Highway near Hong Lok Yuen Road",
+    "lat": 22.46264873,
+    "lng": 114.1489023,
+    "image": "https://tdcctv.data.one.gov.hk/TP113F.JPG"
+  },
+  {
+    "id": "FH104F",
+    "region": "Tai Po, North & Yuen Long",
+    "name": "Fanling Highway near Kwu Tung",
+    "lat": 22.5040348,
+    "lng": 114.0949935,
+    "image": "https://tdcctv.data.one.gov.hk/FH104F.JPG"
+  },
+  {
+    "id": "FH107F",
+    "region": "Tai Po, North & Yuen Long",
+    "name": "Fanling Highway near Pak Wo Road",
+    "lat": 22.49860284,
+    "lng": 114.127913,
+    "image": "https://tdcctv.data.one.gov.hk/FH107F.JPG"
+  },
+  {
+    "id": "FH106F",
+    "region": "Tai Po, North & Yuen Long",
+    "name": "Fanling Highway near Sheung Shui Roundabout",
+    "lat": 22.50049801,
+    "lng": 114.1240735,
+    "image": "https://tdcctv.data.one.gov.hk/FH106F.JPG"
+  },
+  {
+    "id": "NH101F",
+    "region": "Tai Po, North & Yuen Long",
+    "name": "Jockey Club Road near Fanling Highway",
+    "lat": 22.48802377,
+    "lng": 114.1464192,
+    "image": "https://tdcctv.data.one.gov.hk/NH101F.JPG"
+  },
+  {
+    "id": "NH109F",
+    "region": "Tai Po, North & Yuen Long",
+    "name": "Jockey Club Road near Ma Sik Road",
+    "lat": 22.50041071,
+    "lng": 114.1342197,
+    "image": "https://tdcctv.data.one.gov.hk/NH109F.JPG"
+  },
+  {
+    "id": "TP114F",
+    "region": "Tai Po, North & Yuen Long",
+    "name": "Nam Wan Road near Kwong Fuk Road",
+    "lat": 22.44660398,
+    "lng": 114.1719393,
+    "image": "https://tdcctv.data.one.gov.hk/TP114F.JPG"
+  },
+  {
+    "id": "BC103F",
+    "region": "Tai Po, North & Yuen Long",
+    "name": "San Sham Road Roundabout",
+    "lat": 22.50212205,
+    "lng": 114.0816315,
+    "image": "https://tdcctv.data.one.gov.hk/BC103F.JPG"
+  },
+  {
+    "id": "BC101F",
+    "region": "Tai Po, North & Yuen Long",
+    "name": "San Tin Highway near Fairview Park",
+    "lat": 22.4732254,
+    "lng": 114.0556398,
+    "image": "https://tdcctv.data.one.gov.hk/BC101F.JPG"
+  },
+  {
+    "id": "BC102F",
+    "region": "Tai Po, North & Yuen Long",
+    "name": "San Tin Highway near Mai Po",
+    "lat": 22.4927649,
+    "lng": 114.0649812,
+    "image": "https://tdcctv.data.one.gov.hk/BC102F.JPG"
+  },
+  {
+    "id": "NH113F",
+    "region": "Tai Po, North & Yuen Long",
+    "name": "San Wan Road near Lung Sum Avenue",
+    "lat": 22.50305446,
+    "lng": 114.1267355,
+    "image": "https://tdcctv.data.one.gov.hk/NH113F.JPG"
+  },
+  {
+    "id": "NH115F",
+    "region": "Tai Po, North & Yuen Long",
+    "name": "Sha Tau Kok Road near Ma Sik Road",
+    "lat": 22.50116311,
+    "lng": 114.1470091,
+    "image": "https://tdcctv.data.one.gov.hk/NH115F.JPG"
+  },
+  {
+    "id": "TP105F",
+    "region": "Tai Po, North & Yuen Long",
+    "name": "Tai Po Tai Wo Road near Nam Wan Road",
+    "lat": 22.45119145,
+    "lng": 114.172114,
+    "image": "https://tdcctv.data.one.gov.hk/TP105F.JPG"
+  },
+  {
+    "id": "TP112F",
+    "region": "Tai Po, North & Yuen Long",
+    "name": "Tai Po Tai Wo Road near Tai Po Road- Tai Wo",
+    "lat": 22.45219287,
+    "lng": 114.1586098,
+    "image": "https://tdcctv.data.one.gov.hk/TP112F.JPG"
+  },
+  {
+    "id": "TP102F",
+    "region": "Tai Po, North & Yuen Long",
+    "name": "Yuen Shin Road near Ting Kok Road",
+    "lat": 22.45688973,
+    "lng": 114.1773116,
+    "image": "https://tdcctv.data.one.gov.hk/TP102F.JPG"
+  },
+  {
+    "id": "ST115F",
+    "region": "Shatin & Ma On Shan",
+    "name": "Fo Tan Road",
+    "lat": 22.38982807,
+    "lng": 114.1975391,
+    "image": "https://tdcctv.data.one.gov.hk/ST115F.JPG"
+  },
+  {
+    "id": "ST725F",
+    "region": "Shatin & Ma On Shan",
+    "name": "Lion Rock Tunnel Road near Sun Tin Wai Estate",
+    "lat": 22.37000701,
+    "lng": 114.1879529,
+    "image": "https://tdcctv.data.one.gov.hk/ST725F.JPG"
+  },
+  {
+    "id": "ST731F",
+    "region": "Shatin & Ma On Shan",
+    "name": "Ma On Shan Bypass near Heng On Estate",
+    "lat": 22.41374312,
+    "lng": 114.227933,
+    "image": "https://tdcctv.data.one.gov.hk/ST731F.JPG"
+  },
+  {
+    "id": "ST732F",
+    "region": "Shatin & Ma On Shan",
+    "name": "Ma On Shan Bypass near Yiu On Estate",
+    "lat": 22.41757026,
+    "lng": 114.2332959,
+    "image": "https://tdcctv.data.one.gov.hk/ST732F.JPG"
+  },
+  {
+    "id": "ST112F",
+    "region": "Shatin & Ma On Shan",
+    "name": "Mei Tin Rd nr Che Kung Miu Rd Rbt",
+    "lat": 22.37150644,
+    "lng": 114.1792338,
+    "image": "https://tdcctv.data.one.gov.hk/ST112F.JPG"
+  },
+  {
+    "id": "ST117F",
+    "region": "Shatin & Ma On Shan",
+    "name": "Sai Sha Road near Ma On Shan Sports Ground",
+    "lat": 22.42173545,
+    "lng": 114.2268287,
+    "image": "https://tdcctv.data.one.gov.hk/ST117F.JPG"
+  },
+  {
+    "id": "ST119F",
+    "region": "Shatin & Ma On Shan",
+    "name": "Sai Sha Road/Kam Ying Road",
+    "lat": 22.42718513,
+    "lng": 114.2402838,
+    "image": "https://tdcctv.data.one.gov.hk/ST119F.JPG"
+  },
+  {
+    "id": "ST715F",
+    "region": "Shatin & Ma On Shan",
+    "name": "Sha Lek Highway near Prince Wales Hospital",
+    "lat": 22.37760035,
+    "lng": 114.2004308,
+    "image": "https://tdcctv.data.one.gov.hk/ST715F.JPG"
+  },
+  {
+    "id": "ST106F",
+    "region": "Shatin & Ma On Shan",
+    "name": "Sha Tin Wai Road/Sha Lek Highway Slip Road",
+    "lat": 22.3779165,
+    "lng": 114.1998871,
+    "image": "https://tdcctv.data.one.gov.hk/ST106F.JPG"
+  },
+  {
+    "id": "ST721F",
+    "region": "Shatin & Ma On Shan",
+    "name": "Shatin Road near Yuen Chau Kok Park",
+    "lat": 22.38380417,
+    "lng": 114.2014612,
+    "image": "https://tdcctv.data.one.gov.hk/ST721F.JPG"
+  },
+  {
+    "id": "SM933F",
+    "region": "Shatin & Ma On Shan",
+    "name": "Shing Mun Tunnel Road",
+    "lat": 22.37778258,
+    "lng": 114.1824479,
+    "image": "https://tdcctv.data.one.gov.hk/SM933F.JPG"
+  },
+  {
+    "id": "SM934F",
+    "region": "Shatin & Ma On Shan",
+    "name": "Shing Mun Tunnel Shatin Side",
+    "lat": 22.38244241,
+    "lng": 114.1741555,
+    "image": "https://tdcctv.data.one.gov.hk/SM934F.JPG"
+  },
+  {
+    "id": "ST109F",
+    "region": "Shatin & Ma On Shan",
+    "name": "Tai Chung Kiu Road near Ravana Garden",
+    "lat": 22.38920413,
+    "lng": 114.2032781,
+    "image": "https://tdcctv.data.one.gov.hk/ST109F.JPG"
+  },
+  {
+    "id": "ST114F",
+    "region": "Shatin & Ma On Shan",
+    "name": "Tai Po Road - Shatin Section",
+    "lat": 22.3843925,
+    "lng": 114.1898379,
+    "image": "https://tdcctv.data.one.gov.hk/ST114F.JPG"
+  },
+  {
+    "id": "ST703F",
+    "region": "Shatin & Ma On Shan",
+    "name": "Tai Po Road near MTR Racecourse Station",
+    "lat": 22.39488488,
+    "lng": 114.1996569,
+    "image": "https://tdcctv.data.one.gov.hk/ST703F.JPG"
+  },
+  {
+    "id": "ST712F1",
+    "region": "Shatin & Ma On Shan",
+    "name": "Tate's Cairn Highway near Shatin Hospital",
+    "lat": 22.39842255,
+    "lng": 114.2123212,
+    "image": "https://tdcctv.data.one.gov.hk/ST712F1.JPG"
+  },
+  {
+    "id": "ST714F",
+    "region": "Shatin & Ma On Shan",
+    "name": "Tate's Cairn Highway near Tai Shek Kwu",
+    "lat": 22.38789322,
+    "lng": 114.2111629,
+    "image": "https://tdcctv.data.one.gov.hk/ST714F.JPG"
+  },
+  {
+    "id": "TH110F",
+    "region": "Shatin & Ma On Shan",
+    "name": "Tolo Highway near HK Science Park",
+    "lat": 22.43822255,
+    "lng": 114.1968177,
+    "image": "https://tdcctv.data.one.gov.hk/TH110F.JPG"
+  },
+  {
+    "id": "TH114F",
+    "region": "Shatin & Ma On Shan",
+    "name": "Tolo Highway near Island House Interchange",
+    "lat": 22.44478893,
+    "lng": 114.1776419,
+    "image": "https://tdcctv.data.one.gov.hk/TH114F.JPG"
+  },
+  {
+    "id": "TH101F",
+    "region": "Shatin & Ma On Shan",
+    "name": "Tolo Highway near Ma Liu Shui Interchange",
+    "lat": 22.41141738,
+    "lng": 114.2125867,
+    "image": "https://tdcctv.data.one.gov.hk/TH101F.JPG"
+  },
+  {
+    "id": "TH703F",
+    "region": "Tai Po, North & Yuen Long",
+    "name": "Tolo Highway near Ma Wo",
+    "lat": 22.44067912,
+    "lng": 114.1592719,
+    "image": "https://tdcctv.data.one.gov.hk/TH703F.JPG"
+  },
+  {
+    "id": "TH701F",
+    "region": "Tai Po, North & Yuen Long",
+    "name": "Tolo Highway near Mui Shue Hang",
+    "lat": 22.45634561,
+    "lng": 114.1496225,
+    "image": "https://tdcctv.data.one.gov.hk/TH701F.JPG"
+  },
+  {
+    "id": "ST701F",
+    "region": "Shatin & Ma On Shan",
+    "name": "Tolo Highway near Sha Tin Sewage Treatment Works",
+    "lat": 22.40714628,
+    "lng": 114.2110997,
+    "image": "https://tdcctv.data.one.gov.hk/ST701F.JPG"
+  },
+  {
+    "id": "TC551F",
+    "region": "Lantau",
+    "name": "Kap Shui Mun Bridge",
+    "lat": 22.34523759,
+    "lng": 114.0572263,
+    "image": "https://tdcctv.data.one.gov.hk/TC551F.JPG"
+  },
+  {
+    "id": "TC573F",
+    "region": "Lantau",
+    "name": "Lantau Link near Toll Plaza",
+    "lat": 22.33733939,
+    "lng": 114.0389447,
+    "image": "https://tdcctv.data.one.gov.hk/TC573F.JPG"
+  },
+  {
+    "id": "NL126F",
+    "region": "Lantau",
+    "name": "North Lantau Highway near Pak Mong",
+    "lat": 22.2980955,
+    "lng": 113.9660833,
+    "image": "https://tdcctv.data.one.gov.hk/NL126F.JPG"
+  },
+  {
+    "id": "NL124F",
+    "region": "Lantau",
+    "name": "North Lantau Highway near Siu Ho Wan",
+    "lat": 22.31008185,
+    "lng": 113.9904935,
+    "image": "https://tdcctv.data.one.gov.hk/NL124F.JPG"
+  },
+  {
+    "id": "NL121F",
+    "region": "Lantau",
+    "name": "North Lantau Highway near Sunny Bay",
+    "lat": 22.3249869,
+    "lng": 114.0204954,
+    "image": "https://tdcctv.data.one.gov.hk/NL121F.JPG"
+  },
+  {
+    "id": "NL128F",
+    "region": "Lantau",
+    "name": "North Lantau Highway near Tung Chung",
+    "lat": 22.2889767,
+    "lng": 113.9476306,
+    "image": "https://tdcctv.data.one.gov.hk/NL128F.JPG"
+  },
+  {
+    "id": "PB106F",
+    "region": "Lantau",
+    "name": "Penny's Bay Highway",
+    "lat": 22.3253802,
+    "lng": 114.0357825,
+    "image": "https://tdcctv.data.one.gov.hk/PB106F.JPG"
+  },
+  {
+    "id": "TC560F",
+    "region": "Lantau",
+    "name": "Tsing Ma Bridge",
+    "lat": 22.35110094,
+    "lng": 114.074065,
+    "image": "https://tdcctv.data.one.gov.hk/TC560F.JPG"
+  },
+  {
+    "id": "FH706F",
+    "region": "Tai Po, North & Yuen Long",
+    "name": "Fanling Highway near MTR Fanling Station",
+    "lat": 22.49162524,
+    "lng": 114.1386246,
+    "image": "https://tdcctv.data.one.gov.hk/FH706F.JPG"
+  },
+  {
+    "id": "ST922F",
+    "region": "Shatin & Ma On Shan",
+    "name": "Lion Rock Tunnel Road near Hung Mui Kuk Road",
+    "lat": 22.36487795,
+    "lng": 114.1822532,
+    "image": "https://tdcctv.data.one.gov.hk/ST922F.JPG"
+  },
+  {
+    "id": "SW103F",
+    "region": "Tuen Mun & Tin Shui Wai",
+    "name": "Kong Sham Western Highway near Ha Tsuen",
+    "lat": 22.44774713,
+    "lng": 113.9790409,
+    "image": "https://tdcctv.data.one.gov.hk/SW103F.JPG"
+  },
+  {
+    "id": "SW108F",
+    "region": "Tuen Mun & Tin Shui Wai",
+    "name": "Yuen Long Highway near Tan Kwai Tsuen",
+    "lat": 22.42438851,
+    "lng": 113.9971503,
+    "image": "https://tdcctv.data.one.gov.hk/SW108F.JPG"
+  },
+  {
+    "id": "TL102F",
+    "region": "Tai Po, North & Yuen Long",
+    "name": "Tai Lam Tunnel - Yuen Long Side",
+    "lat": 22.41030489,
+    "lng": 114.0605797,
+    "image": "https://tdcctv.data.one.gov.hk/TL102F.JPG"
+  },
+  {
+    "id": "TL103F",
+    "region": "Tuen Mun & Tin Shui Wai",
+    "name": "Tai Lam Tunnel - Ting Kau Side",
+    "lat": 22.37542451,
+    "lng": 114.0669298,
+    "image": "https://tdcctv.data.one.gov.hk/TL103F.JPG"
+  },
+  {
+    "id": "TS102F",
+    "region": "Tsuen Wan",
+    "name": "Nam Wan Tunnel- Stonecutters Bridge side",
+    "lat": 22.33475496,
+    "lng": 114.1066537,
+    "image": "https://tdcctv.data.one.gov.hk/TS102F.JPG"
+  },
+  {
+    "id": "TS104F",
+    "region": "Tsuen Wan",
+    "name": "Tsing Sha Highway near Lai Chi Kok",
+    "lat": 22.34238857,
+    "lng": 114.1437231,
+    "image": "https://tdcctv.data.one.gov.hk/TS104F.JPG"
+  },
+  {
+    "id": "TS105F",
+    "region": "Shatin & Ma On Shan",
+    "name": "Sha Tin Heights Tunnel - Sha Tin Side",
+    "lat": 22.36758712,
+    "lng": 114.1714857,
+    "image": "https://tdcctv.data.one.gov.hk/TS105F.JPG"
+  },
+  {
+    "id": "TW701F",
+    "region": "Tsuen Wan",
+    "name": "Cheung Pei Shan Road near Mei Wan Street",
+    "lat": 22.37667801,
+    "lng": 114.1145851,
+    "image": "https://tdcctv.data.one.gov.hk/TW701F.JPG"
+  },
+  {
+    "id": "H702F",
+    "region": "Hong Kong Island",
+    "name": "Western Harbour Crossing Hong Kong Side",
+    "lat": 22.29032691,
+    "lng": 114.1423865,
+    "image": "https://tdcctv.data.one.gov.hk/H702F.JPG"
+  },
+  {
+    "id": "H703F",
+    "region": "Hong Kong Island",
+    "name": "Connaught Road West",
+    "lat": 22.28871049,
+    "lng": 114.142678,
+    "image": "https://tdcctv.data.one.gov.hk/H703F.JPG"
+  },
+  {
+    "id": "K901F",
+    "region": "Kowloon",
+    "name": "Western Harbour Crossing Kowloon Side",
+    "lat": 22.30759635,
+    "lng": 114.1612005,
+    "image": "https://tdcctv.data.one.gov.hk/K901F.JPG"
+  },
+  {
+    "id": "K931F",
+    "region": "Kowloon",
+    "name": "Tate's Cairn Tunnel Kowloon Side",
+    "lat": 22.33368375,
+    "lng": 114.2065874,
+    "image": "https://tdcctv.data.one.gov.hk/K931F.JPG"
+  },
+  {
+    "id": "K952F",
+    "region": "Kowloon",
+    "name": "Eastern Harbour Crossing Kowloon Side",
+    "lat": 22.30140107,
+    "lng": 114.2339672,
+    "image": "https://tdcctv.data.one.gov.hk/K952F.JPG"
+  },
+  {
+    "id": "ST942F",
+    "region": "Shatin & Ma On Shan",
+    "name": "Tate's Cairn Tunnel Shatin Side",
+    "lat": 22.38206891,
+    "lng": 114.2093748,
+    "image": "https://tdcctv.data.one.gov.hk/ST942F.JPG"
+  },
+  {
+    "id": "K121F",
+    "region": "Kowloon",
+    "name": "Canton Road near Salisbury Road",
+    "lat": 22.29627254,
+    "lng": 114.1692661,
+    "image": "https://tdcctv.data.one.gov.hk/K121F.JPG"
+  },
+  {
+    "id": "TL101F",
+    "region": "Tai Po, North & Yuen Long",
+    "name": "Tsing Long Highway near Ko Po San Tsuen",
+    "lat": 22.43886499,
+    "lng": 114.056136,
+    "image": "https://tdcctv.data.one.gov.hk/TL101F.JPG"
+  },
+  {
+    "id": "TR706F",
+    "region": "Tuen Mun & Tin Shui Wai",
+    "name": "Tuen Mun Road near MTR Siu Hong Station",
+    "lat": 22.41137289,
+    "lng": 113.9793256,
+    "image": "https://tdcctv.data.one.gov.hk/TR706F.JPG"
+  },
+  {
+    "id": "TS101F",
+    "region": "Tsuen Wan",
+    "name": "Nam Wan Tunnel - Sai Tso Wan Side",
+    "lat": 22.34330086,
+    "lng": 114.0938645,
+    "image": "https://tdcctv.data.one.gov.hk/TS101F.JPG"
+  },
+  {
+    "id": "NL206F",
+    "region": "Lantau",
+    "name": "Shun Long Road near North Lantau Highway",
+    "lat": 22.29964603,
+    "lng": 113.9709987,
+    "image": "https://tdcctv.data.one.gov.hk/NL206F.JPG"
+  },
+  {
+    "id": "CW103F",
+    "region": "Hong Kong Island",
+    "name": "Central - Wan Chai Bypass near Central",
+    "lat": 22.28737633,
+    "lng": 114.1569719,
+    "image": "https://tdcctv.data.one.gov.hk/CW103F.JPG"
+  },
+  {
+    "id": "CW803F",
+    "region": "Hong Kong Island",
+    "name": "Central - Wan Chai Bypass near City Garden",
+    "lat": 22.28988738,
+    "lng": 114.191702,
+    "image": "https://tdcctv.data.one.gov.hk/CW803F.JPG"
+  },
+  {
+    "id": "AID08201",
+    "region": "Lantau",
+    "name": "North Lantau Highway near Tung Chung (N) - Eastbound",
+    "lat": 22.29380308,
+    "lng": 113.9379186,
+    "image": "https://tdcctv.data.one.gov.hk/AID08201.JPG"
+  },
+  {
+    "id": "AID08122",
+    "region": "Lantau",
+    "name": "North Lantau Highway near Tung Chung (N) - Westbound",
+    "lat": 22.29094,
+    "lng": 113.94077,
+    "image": "https://tdcctv.data.one.gov.hk/AID08122.JPG"
+  },
+  {
+    "id": "AID08218",
+    "region": "Lantau",
+    "name": "North Lantau Highway near Tung Yip Hang - Eastbound",
+    "lat": 22.3201174,
+    "lng": 114.0008947,
+    "image": "https://tdcctv.data.one.gov.hk/AID08218.JPG"
+  },
+  {
+    "id": "AID08107",
+    "region": "Lantau",
+    "name": "North Lantau Highway near Tung Yip Hang - Westbound",
+    "lat": 22.31858015,
+    "lng": 113.9990137,
+    "image": "https://tdcctv.data.one.gov.hk/AID08107.JPG"
+  },
+  {
+    "id": "AID08212",
+    "region": "Lantau",
+    "name": "North Lantau Highway near Tai Ho Wan - Eastbound",
+    "lat": 22.30347613,
+    "lng": 113.9791671,
+    "image": "https://tdcctv.data.one.gov.hk/AID08212.JPG"
+  },
+  {
+    "id": "AID08112",
+    "region": "Lantau",
+    "name": "North Lantau Highway near Tai Ho Wan - Westbound",
+    "lat": 22.3044805,
+    "lng": 113.9807961,
+    "image": "https://tdcctv.data.one.gov.hk/AID08112.JPG"
+  },
+  {
+    "id": "NL022F",
+    "region": "Lantau",
+    "name": "Tung Wing Road",
+    "lat": 22.30805,
+    "lng": 113.93874,
+    "image": "https://tdcctv.data.one.gov.hk/NL022F.JPG"
+  },
+  {
+    "id": "HH001F",
+    "region": "Tai Po, North & Yuen Long",
+    "name": "Heung Yuen Wai Highway near Fanling Highway Interchange",
+    "lat": 22.47786575,
+    "lng": 114.1535925,
+    "image": "https://tdcctv.data.one.gov.hk/HH001F.JPG"
+  },
+  {
+    "id": "HH002F",
+    "region": "Tai Po, North & Yuen Long",
+    "name": "Heung Yuen Wai Highway near Cheung Shan Tunnel North Portal",
+    "lat": 22.53028872,
+    "lng": 114.1709837,
+    "image": "https://tdcctv.data.one.gov.hk/HH002F.JPG"
+  },
+  {
+    "id": "HH003F",
+    "region": "Tai Po, North & Yuen Long",
+    "name": "Heung Yuen Wai Highway near Ping Yeung Interchange",
+    "lat": 22.53909273,
+    "lng": 114.1618259,
+    "image": "https://tdcctv.data.one.gov.hk/HH003F.JPG"
+  },
+  {
+    "id": "HH004F",
+    "region": "Tai Po, North & Yuen Long",
+    "name": "Heung Yuen Wai Highway near Lin Ma Hang Road Interchange",
+    "lat": 22.54589147,
+    "lng": 114.1527062,
+    "image": "https://tdcctv.data.one.gov.hk/HH004F.JPG"
+  },
+  {
+    "id": "GF0710",
+    "region": "Kowloon",
+    "name": "(Smart Lamppost)Wai Yip Street near Sheung Yuet Road",
+    "lat": 22.32187,
+    "lng": 114.21137,
+    "image": "https://tdcctv.data.one.gov.hk/GF0710.JPG"
+  },
+  {
+    "id": "DF3641",
+    "region": "Kowloon",
+    "name": "(Smart Lamppost)Shing Kai Road near Muk Chui Street",
+    "lat": 22.33131,
+    "lng": 114.2046,
+    "image": "https://tdcctv.data.one.gov.hk/DF3641.JPG"
+  },
+  {
+    "id": "AID03203",
+    "region": "Kowloon",
+    "name": "West Kowloon Highway Southbound near Hoi Lai Estate",
+    "lat": 22.332597,
+    "lng": 114.140284,
+    "image": "https://tdcctv.data.one.gov.hk/AID03203.JPG"
+  },
+  {
+    "id": "AID03204",
+    "region": "Kowloon",
+    "name": "West Kowloon Highway Southbound near Hing Wah Street West",
+    "lat": 22.32936742,
+    "lng": 114.1486862,
+    "image": "https://tdcctv.data.one.gov.hk/AID03204.JPG"
+  },
+  {
+    "id": "AID03112",
+    "region": "Kowloon",
+    "name": "West Kowloon Highway Northbound near Hing Wah Street West",
+    "lat": 22.32897925,
+    "lng": 114.1495114,
+    "image": "https://tdcctv.data.one.gov.hk/AID03112.JPG"
+  },
+  {
+    "id": "AID03114",
+    "region": "Kowloon",
+    "name": "West Kowloon Highway Northbound near Tsing Sha Highway",
+    "lat": 22.331691,
+    "lng": 114.142678,
+    "image": "https://tdcctv.data.one.gov.hk/AID03114.JPG"
+  },
+  {
+    "id": "AID07103",
+    "region": "Kowloon",
+    "name": "Tseung Kwan O Road Westbound near Telephone Exchange",
+    "lat": 22.31638993,
+    "lng": 114.2594218,
+    "image": "https://tdcctv.data.one.gov.hk/AID07103.JPG"
+  },
+  {
+    "id": "AID07104",
+    "region": "Kowloon",
+    "name": "Tseung Kwan O Road near  Westbound near Tseung Kwan O Tunnel Portal",
+    "lat": 22.320006,
+    "lng": 114.255329,
+    "image": "https://tdcctv.data.one.gov.hk/AID07104.JPG"
+  },
+  {
+    "id": "AID09154",
+    "region": "Tai Po, North & Yuen Long",
+    "name": "Fanling Highway Eastbound near So Kwun Po Road",
+    "lat": 22.498633,
+    "lng": 114.129019,
+    "image": "https://tdcctv.data.one.gov.hk/AID09154.JPG"
+  },
+  {
+    "id": "AID09157",
+    "region": "Tai Po, North & Yuen Long",
+    "name": "Fanling Highway Eastbound near Pak Wo Road",
+    "lat": 22.488385,
+    "lng": 114.144002,
+    "image": "https://tdcctv.data.one.gov.hk/AID09157.JPG"
+  },
+  {
+    "id": "AID09252",
+    "region": "Tai Po, North & Yuen Long",
+    "name": "Fanling Highway Westbound near Fanling Centre",
+    "lat": 22.48848374,
+    "lng": 114.1435232,
+    "image": "https://tdcctv.data.one.gov.hk/AID09252.JPG"
+  },
+  {
+    "id": "AID09254",
+    "region": "Tai Po, North & Yuen Long",
+    "name": "Fanling Highway Westbound near Exit to So Kwun Po Road",
+    "lat": 22.49589538,
+    "lng": 114.1337255,
+    "image": "https://tdcctv.data.one.gov.hk/AID09254.JPG"
+  },
+  {
+    "id": "AID09255",
+    "region": "Tai Po, North & Yuen Long",
+    "name": "Fanling Highway Westbound near Entrance from So Kwun Po Road",
+    "lat": 22.498459,
+    "lng": 114.128933,
+    "image": "https://tdcctv.data.one.gov.hk/AID09255.JPG"
+  }
+]
