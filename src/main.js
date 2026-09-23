@@ -199,7 +199,8 @@ function selectCamera(id, { fromMap = false, openPanel = false, openPopup = fals
   }
 
   if (marker) {
-    map.setView([camera.lat, camera.lng], Math.max(map.getZoom(), 14), { animate: true });
+    const targetZoom = Math.min(Math.max(map.getZoom(), 13), 15);
+    map.setView([camera.lat, camera.lng], targetZoom, { animate: true });
     if (openPopup || fromMap) marker.openPopup();
   }
 
