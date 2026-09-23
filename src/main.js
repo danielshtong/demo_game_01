@@ -211,6 +211,7 @@ function selectCamera(id, { fromMap = false, openPanel = false, openPopup = fals
   `;
 
   renderCameraList();
+  els.cameraSection.scrollIntoView({ behavior: "smooth", block: "nearest" });
 
   if (openPanel || window.matchMedia("(max-width: 900px)").matches) {
     setMobileView("panel");

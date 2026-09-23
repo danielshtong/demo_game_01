@@ -239,7 +239,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.55rem;
-  max-height: 38vh;
+  max-height: 28vh;
   overflow: auto;
   padding-right: 0.2rem;
 }
