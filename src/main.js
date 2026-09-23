@@ -34,6 +34,8 @@ const els = {
   refresh: document.getElementById("refresh-btn"),
   cameraSection: document.getElementById("camera-section"),
   cameraDetail: document.getElementById("camera-detail"),
+  cameraList: document.getElementById("camera-list"),
+  cameraCount: document.getElementById("camera-count"),
   closeCamera: document.getElementById("close-camera"),
   clock: document.getElementById("clock"),
   status: document.getElementById("status-pill"),
@@ -75,7 +77,7 @@ function renderRegionChips() {
     btn.addEventListener("click", () => {
       if (state.activeRegions.has(region)) state.activeRegions.delete(region);
       else state.activeRegions.add(region);
-      applyFilters();
+      applyFilters({ fit: true });
       renderRegionChips();
     });
     els.regions.appendChild(btn);
@@ -92,14 +94,40 @@ function matchesQuery(camera, query) {
     .every((token) => hay.includes(token));
 }
 
-function applyFilters() {
+function applyFilters({ fit = false } = {}) {
   state.filtered = state.cameras.filter((camera) => {
     const regionOk =
       state.activeRegions.size === 0 || state.activeRegions.has(camera.region);
     return regionOk && matchesQuery(camera, state.query);
   });
   renderMarkers();
-  if (state.filtered.length) fitToCameras(map, state.filtered);
+  renderCameraList();
+  if (fit && state.filtered.length) fitToCameras(map, state.filtered);
+}
+
+function renderCameraList() {
+  els.cameraCount.textContent = String(state.filtered.length);
+  const rows = state.filtered.slice(0, 40);
+  if (!rows.length) {
+    els.cameraList.innerHTML = `<p class="muted">No cameras match this filter.</p>`;
+    return;
+  }
+
+  els.cameraList.innerHTML = rows
+    .map(
+      (camera) => `
+      <button type="button" class="camera-row${camera.id === state.selectedId ? " is-active" : ""}" data-camera="${escapeHtml(camera.id)}">
+        <strong>${escapeHtml(camera.name)}</strong>
+        <span>${escapeHtml(REGION_SHORT[camera.region] || camera.region)} · ${escapeHtml(camera.id)}</span>
+      </button>`
+    )
+    .join("");
+
+  els.cameraList.querySelectorAll("[data-camera]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      selectCamera(btn.getAttribute("data-camera"), { openPanel: true, openPopup: true });
+    });
+  });
 }
 
 function renderMarkers() {
@@ -111,21 +139,30 @@ function renderMarkers() {
       icon: createCameraIcon(camera.id === state.selectedId),
       title: camera.name,
       keyboard: true,
+      riseOnHover: true,
     });
 
     marker.bindPopup(
       `<p class="popup-title">${escapeHtml(camera.name)}</p>
        <p class="popup-meta">${escapeHtml(camera.region)} · ${escapeHtml(camera.id)}</p>
        <button type="button" class="popup-btn" data-open="${escapeHtml(camera.id)}">Open camera</button>`,
-      { closeButton: false }
+      { closeButton: true, autoPan: true }
     );
 
-    marker.on("click", () => selectCamera(camera.id, { fromMap: true }));
+    marker.on("click", () => {
+      selectCamera(camera.id, { fromMap: true, openPopup: true });
+    });
+
     marker.on("popupopen", () => {
       const btn = document.querySelector(`[data-open="${CSS.escape(camera.id)}"]`);
-      btn?.addEventListener("click", () => selectCamera(camera.id, { openPanel: true }), {
-        once: true,
-      });
+      btn?.addEventListener(
+        "click",
+        (event) => {
+          event.preventDefault();
+          selectCamera(camera.id, { openPanel: true });
+        },
+        { once: true }
+      );
     });
 
     marker.addTo(layer);
@@ -141,25 +178,39 @@ function escapeHtml(value) {
     .replaceAll('"', "&quot;");
 }
 
-function selectCamera(id, { fromMap = false, openPanel = false } = {}) {
+function selectCamera(id, { fromMap = false, openPanel = false, openPopup = false } = {}) {
   const camera = state.cameras.find((c) => c.id === id);
   if (!camera) return;
 
+  const previous = state.selectedId;
   state.selectedId = id;
-  renderMarkers();
 
-  const marker = state.markers.get(id);
+  // Refresh icons without wiping the clicked marker mid-event when possible
+  if (previous && state.markers.has(previous)) {
+    state.markers.get(previous).setIcon(createCameraIcon(false));
+  }
+
+  let marker = state.markers.get(id);
+  if (!marker) {
+    renderMarkers();
+    marker = state.markers.get(id);
+  } else {
+    marker.setIcon(createCameraIcon(true));
+  }
+
   if (marker) {
-    map.panTo([camera.lat, camera.lng], { animate: true });
-    if (!fromMap) marker.openPopup();
+    map.setView([camera.lat, camera.lng], Math.max(map.getZoom(), 14), { animate: true });
+    if (openPopup || fromMap) marker.openPopup();
   }
 
   els.cameraSection.classList.remove("is-empty");
   els.cameraDetail.innerHTML = `
-    <img src="${cameraImageUrl(camera)}" alt="Live traffic camera at ${escapeHtml(camera.name)}" />
+    <img src="${cameraImageUrl(camera)}" alt="Live traffic camera at ${escapeHtml(camera.name)}" loading="eager" />
     <h3>${escapeHtml(camera.name)}</h3>
     <p class="meta">${escapeHtml(camera.region)} · Camera ${escapeHtml(camera.id)}</p>
   `;
+
+  renderCameraList();
 
   if (openPanel || window.matchMedia("(max-width: 900px)").matches) {
     setMobileView("panel");
@@ -169,10 +220,14 @@ function selectCamera(id, { fromMap = false, openPanel = false } = {}) {
 }
 
 function clearCamera() {
+  const previous = state.selectedId;
   state.selectedId = null;
   els.cameraSection.classList.add("is-empty");
   els.cameraDetail.innerHTML = "";
-  renderMarkers();
+  if (previous && state.markers.has(previous)) {
+    state.markers.get(previous).setIcon(createCameraIcon(false));
+  }
+  renderCameraList();
   if (state.imageTimer) clearInterval(state.imageTimer);
 }
 
@@ -235,7 +290,7 @@ function bindEvents() {
     clearTimeout(searchTimer);
     searchTimer = setTimeout(() => {
       state.query = els.search.value.trim();
-      applyFilters();
+      applyFilters({ fit: true });
     }, 120);
   });
 
@@ -244,7 +299,7 @@ function bindEvents() {
     state.query = "";
     els.search.value = "";
     renderRegionChips();
-    applyFilters();
+    applyFilters({ fit: true });
   });
 
   els.refresh.addEventListener("click", () => loadNews());
@@ -266,7 +321,7 @@ function boot() {
   tickClock();
   setInterval(tickClock, 1000);
   renderRegionChips();
-  applyFilters();
+  applyFilters({ fit: true });
   bindEvents();
   loadNews();
   state.newsTimer = setInterval(loadNews, 5 * 60_000);
@@ -275,7 +330,6 @@ function boot() {
     els.panel.classList.add("is-open");
   }
 
-  // Warm first paint on mobile map
   setTimeout(() => map.invalidateSize(), 100);
 }
 

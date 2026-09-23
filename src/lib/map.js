@@ -16,10 +16,10 @@ export function createMap(container) {
 
   L.control.zoom({ position: "bottomleft" }).addTo(map);
 
-  L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    className: "hk-basemap",
     attribution:
-      '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
-    subdomains: "abcd",
+      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
     maxZoom: 19,
   }).addTo(map);
 
@@ -28,11 +28,11 @@ export function createMap(container) {
 
 export function createCameraIcon(active = false) {
   return L.divIcon({
-    className: "",
-    html: `<span class="cam-marker${active ? " is-active" : ""}"></span>`,
-    iconSize: [14, 14],
-    iconAnchor: [7, 7],
-    popupAnchor: [0, -10],
+    className: "cam-icon",
+    html: `<button type="button" class="cam-marker${active ? " is-active" : ""}" aria-label="Traffic camera"></button>`,
+    iconSize: [28, 28],
+    iconAnchor: [14, 14],
+    popupAnchor: [0, -14],
   });
 }
 

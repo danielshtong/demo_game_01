@@ -30,4 +30,4 @@ npm run build
 npm run preview
 ```
 
-Built with Vite, Leaflet, and CARTO basemap tiles.
+Built with Vite, Leaflet, and OpenStreetMap tiles.
