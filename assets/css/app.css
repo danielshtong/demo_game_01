@@ -171,7 +171,7 @@ body.stage:not(.has-media) .progress { display: none; }
   left: 0;
   right: 0;
   bottom: 0;
-  height: 3px;
+  height: 5px;
   z-index: 5;
   background: rgba(255, 255, 255, 0.16);
 }
@@ -428,7 +428,14 @@ body.studio {
   border-radius: 10px;
   padding: 8px 10px;
 }
-.name-input { font-weight: 600; }
+.name-input {
+  font-weight: 600;
+  background: transparent;
+  border-color: transparent;
+  padding-left: 0;
+}
+.name-input:focus { background: #0d0f0b; border-color: var(--line); padding-left: 10px; }
+.hud .kicker, .centerpiece > .kicker { font-size: 18px; letter-spacing: 0.14em; }
 .meta { margin: 6px 0; font-size: 13px; }
 .live {
   display: none;

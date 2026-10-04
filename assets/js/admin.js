@@ -303,7 +303,14 @@ async function load() {
   await paintStorage();
 }
 
+function syncScreenName() {
+  const input = document.getElementById('screen-name');
+  if (!input || !state.settings) return;
+  state.settings.screenName = input.value.trim();
+}
+
 async function persistSettings() {
+  syncScreenName();
   state.settings = await enqueue(() => saveSettings(state.settings));
   applySettingsToForm();
 }
@@ -423,10 +430,13 @@ async function move(id, direction) {
 
 async function removeItem(id) {
   const item = state.items.find((entry) => entry.id === id);
-  state.items = state.items.filter((entry) => entry.id !== id);
+  const nextItems = state.items.filter((entry) => entry.id !== id);
+  state.items = nextItems;
+  renderList();
+  suppressRemote += 1;
   try {
     await enqueue(async () => {
-      await savePlaylist(state.items);
+      await savePlaylist(nextItems);
       if (item) await deleteMedia(item.mediaId, { silent: true });
     });
     if (item) {
@@ -442,22 +452,31 @@ async function removeItem(id) {
     console.error(error);
     toast('Couldn’t remove that file');
     await load();
+  } finally {
+    suppressRemote -= 1;
   }
 }
 
+let armedDelete = null;
+let suppressRemote = 0;
+
+function disarmDelete() {
+  if (!armedDelete) return;
+  armedDelete.dataset.armed = '0';
+  if (armedDelete.isConnected) armedDelete.textContent = 'Delete';
+  armedDelete = null;
+}
+
 function armDelete(button, id) {
-  if (button.dataset.armed !== '1') {
-    button.dataset.armed = '1';
-    button.textContent = 'Delete?';
-    setTimeout(() => {
-      if (button.dataset.armed === '1' && button.isConnected) {
-        button.dataset.armed = '0';
-        button.textContent = 'Delete';
-      }
-    }, 2500);
+  if (armedDelete === button) {
+    disarmDelete();
+    removeItem(id);
     return;
   }
-  removeItem(id);
+  disarmDelete();
+  armedDelete = button;
+  button.dataset.armed = '1';
+  button.textContent = 'Delete?';
 }
 
 async function paintPlace() {
@@ -514,6 +533,13 @@ document.addEventListener('drop', (event) => {
 
 list.addEventListener('pointerdown', (event) => {
   blockDrag = Boolean(event.target.closest('input, button, a, textarea, label'));
+});
+document.addEventListener('pointerdown', (event) => {
+  if (armedDelete && event.target.closest('[data-action="delete"]') !== armedDelete) disarmDelete();
+  if (clearAll.dataset.armed === '1' && !clearAll.contains(event.target)) {
+    clearAll.dataset.armed = '0';
+    clearAll.textContent = 'Remove all';
+  }
 });
 list.addEventListener('dragstart', (event) => {
   const row = event.target.closest('.row');
@@ -596,12 +622,6 @@ clearAll.addEventListener('click', async () => {
   if (clearAll.dataset.armed !== '1') {
     clearAll.dataset.armed = '1';
     clearAll.textContent = 'Remove everything?';
-    setTimeout(() => {
-      if (clearAll.dataset.armed === '1') {
-        clearAll.dataset.armed = '0';
-        clearAll.textContent = 'Remove all';
-      }
-    }, 2500);
     return;
   }
   clearAll.dataset.armed = '0';
@@ -621,8 +641,15 @@ clearAll.addEventListener('click', async () => {
   }
 });
 
-document.getElementById('screen-name').addEventListener('change', () => {
-  state.settings.screenName = document.getElementById('screen-name').value.trim();
+const screenNameInput = document.getElementById('screen-name');
+let screenNameTimer = 0;
+screenNameInput.addEventListener('input', () => {
+  syncScreenName();
+  clearTimeout(screenNameTimer);
+  screenNameTimer = setTimeout(() => persistSettings(), 200);
+});
+screenNameInput.addEventListener('change', () => {
+  clearTimeout(screenNameTimer);
   persistSettings();
 });
 
@@ -762,6 +789,7 @@ try {
       markPlaying(message.itemId);
       return;
     }
+    if ((message.type === 'playlist' || message.type === 'media') && suppressRemote) return;
     if (message.type === 'playlist' || message.type === 'media' || message.type === 'settings') {
       load().catch((error) => console.error(error));
     }
