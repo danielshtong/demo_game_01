@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lumina Studio</title>
+  <meta name="description" content="Upload images, PDFs, and MP4s, then arrange what the screen plays.">
+  <meta name="theme-color" content="#12140f">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23d6ff4a'/%3E%3Crect x='7' y='10' width='18' height='3' rx='1' fill='%2314160c'/%3E%3Crect x='7' y='17' width='12' height='3' rx='1' fill='%2314160c'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body class="studio">
+  <div class="studio-body">
+    <aside class="rail">
+      <div class="brand">
+        <span class="mark" aria-hidden="true"></span>
+        <span>
+          <strong>Lumina</strong>
+          <small>Screen studio</small>
+        </span>
+      </div>
+      <nav aria-label="Studio">
+        <button type="button" class="nav-btn" data-panel="playlist" aria-current="page">Playlist</button>
+        <button type="button" class="nav-btn" data-panel="display">Display</button>
+        <button type="button" class="nav-btn" data-panel="place">Place &amp; weather</button>
+      </nav>
+      <div class="spacer"></div>
+      <p class="rail-note">Media stays in this browser. The screen has to be opened on the same device.</p>
+      <p id="storage-use" class="rail-note">Checking storage…</p>
+    </aside>
+
+    <div class="workspace">
+      <main class="panels">
+        <p id="needs-http" class="needs-http" hidden>If this page stays empty, open it from a web server instead of a file.</p>
+
+        <section data-panel-view="playlist" id="panel-playlist">
+          <header class="panel-head">
+            <h1>Playlist</h1>
+            <p id="playlist-count">Nothing queued yet</p>
+          </header>
+          <div class="drop" id="drop">
+            <div class="drop-actions">
+              <button type="button" class="btn-primary" id="pick-files">Add files</button>
+              <button type="button" class="btn-ghost" id="add-samples">Add sample slides</button>
+            </div>
+            <p>Drop PNG, JPG, GIF, WEBP, PDF, or MP4 files here.</p>
+            <input id="file-input" type="file" multiple hidden accept="image/png,image/jpeg,image/gif,image/webp,application/pdf,video/mp4,.png,.jpg,.jpeg,.gif,.webp,.pdf,.mp4">
+          </div>
+          <p id="save-status" class="save-status" role="status"></p>
+          <div id="list" class="list" role="list"></div>
+          <div class="danger-zone">
+            <div>
+              <strong>Remove all media</strong>
+              <p>Clears the playlist from this browser. Display settings stay.</p>
+            </div>
+            <button type="button" class="btn-danger" id="clear-all">Remove all</button>
+          </div>
+        </section>
+
+        <section data-panel-view="display" hidden>
+          <header class="panel-head">
+            <h1>Display</h1>
+            <p>Time and date follow this device. Weather follows the city you choose.</p>
+          </header>
+          <div class="display-grid">
+            <div class="stack">
+              <label class="field">
+                <span>Screen name</span>
+                <input id="screen-name" type="text" maxlength="60" placeholder="Lobby" autocomplete="off">
+              </label>
+              <div class="toggle-row">
+                <div>
+                  <strong>Time</strong>
+                  <p>Clock on the screen</p>
+                </div>
+                <button type="button" class="switch" id="toggle-time" aria-checked="true" aria-label="Show time"><i></i></button>
+              </div>
+              <div class="toggle-row">
+                <div>
+                  <strong>Date</strong>
+                  <p>Weekday, month, and year</p>
+                </div>
+                <button type="button" class="switch" id="toggle-date" aria-checked="true" aria-label="Show date"><i></i></button>
+              </div>
+              <div class="toggle-row">
+                <div>
+                  <strong>Weather</strong>
+                  <p>Temperature and conditions</p>
+                </div>
+                <button type="button" class="switch" id="toggle-weather" aria-checked="true" aria-label="Show weather"><i></i></button>
+              </div>
+              <div class="toggle-row">
+                <div>
+                  <strong>Video sound</strong>
+                  <p>Muted videos can start on their own. Sound may need a tap.</p>
+                </div>
+                <button type="button" class="switch" id="toggle-sound" aria-checked="false" aria-label="Play video sound"><i></i></button>
+              </div>
+              <div class="field">
+                <span>Clock</span>
+                <div class="segment" role="radiogroup" aria-label="Clock format">
+                  <button type="button" data-hour="24" role="radio" aria-checked="true">24-hour</button>
+                  <button type="button" data-hour="12" role="radio" aria-checked="false">12-hour</button>
+                </div>
+              </div>
+              <div class="field">
+                <span>Image and video fit</span>
+                <div class="segment" role="radiogroup" aria-label="Media fit">
+                  <button type="button" data-fit="contain" role="radio" aria-checked="true">Fit</button>
+                  <button type="button" data-fit="cover" role="radio" aria-checked="false">Fill</button>
+                </div>
+              </div>
+              <label class="field">
+                <span>Seconds for new slides</span>
+                <input id="default-duration" type="number" min="1" max="3600" value="12">
+              </label>
+              <label class="field">
+                <span>Fade <em id="fade-label">600 ms</em></span>
+                <input id="fade" type="range" min="0" max="1500" step="50" value="600">
+              </label>
+            </div>
+            <div class="stack">
+              <div class="field">
+                <span>Clock and weather corner</span>
+                <div class="pos-grid" role="radiogroup" aria-label="Widget corner">
+                  <button type="button" data-pos="top-left" role="radio" aria-label="Top left" aria-checked="false"></button>
+                  <button type="button" data-pos="top-right" role="radio" aria-label="Top right" aria-checked="false"></button>
+                  <button type="button" data-pos="bottom-left" role="radio" aria-label="Bottom left" aria-checked="true"></button>
+                  <button type="button" data-pos="bottom-right" role="radio" aria-label="Bottom right" aria-checked="false"></button>
+                </div>
+              </div>
+              <p class="hint">On the screen, F toggles full screen. The arrow keys skip ahead or back. PDF pages each stay up for the seconds you set.</p>
+            </div>
+          </div>
+        </section>
+
+        <section data-panel-view="place" hidden>
+          <header class="panel-head">
+            <h1>Place &amp; weather</h1>
+            <p>Search for a city, or use this device’s location. Conditions refresh about every 10 minutes.</p>
+          </header>
+          <form id="place-form" class="place-form" role="search">
+            <input id="place-query" type="search" placeholder="Search a city, for example Hong Kong" autocomplete="off" enterkeyhint="search">
+            <button class="btn-primary" type="submit">Search</button>
+            <button class="btn-ghost" type="button" id="use-location">Use this device</button>
+          </form>
+          <ul id="place-results" class="place-results"></ul>
+          <div id="place-card" class="place-card" hidden></div>
+          <div class="field">
+            <span>Temperature</span>
+            <div class="segment" role="radiogroup" aria-label="Temperature unit">
+              <button type="button" data-unit="celsius" role="radio" aria-checked="true">Celsius</button>
+              <button type="button" data-unit="fahrenheit" role="radio" aria-checked="false">Fahrenheit</button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <aside class="preview-col">
+        <div class="preview-head">
+          <h2>Screen</h2>
+          <a class="btn-primary" href="index.html" target="_blank" rel="noopener">Open screen</a>
+        </div>
+        <div class="preview-frame">
+          <iframe src="index.html?embed=1" title="Live screen preview" allow="autoplay; fullscreen" tabindex="-1"></iframe>
+        </div>
+        <p class="hint">This preview plays the same playlist as the full screen.</p>
+      </aside>
+    </div>
+  </div>
+  <script>
+    setTimeout(() => {
+      const note = document.getElementById('needs-http');
+      if (note) note.hidden = false;
+    }, 2500);
+  </script>
+  <script type="module" src="assets/js/admin.js"></script>
+</body>
+</html>
